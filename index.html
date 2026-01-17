@@ -47,6 +47,7 @@
             --cloud: #A1A1AA;
             --snow: #FAFAFA;
             --red: #EF4444;
+            --amber: #F59E0B;
         }
         
         * {
@@ -75,7 +76,7 @@
         }
         
         section {
-            padding: 100px 0;
+            padding: 80px 0;
         }
         
         /* Typography */
@@ -105,6 +106,10 @@
         
         .highlight {
             color: var(--green);
+        }
+
+        .highlight-red {
+            color: var(--red);
         }
         
         /* Navigation */
@@ -162,10 +167,11 @@
         
         /* Hero Section */
         .hero {
-            min-height: 100vh;
+            min-height: auto;
             display: flex;
             align-items: center;
-            padding-top: 100px;
+            padding-top: 120px;
+            padding-bottom: 60px;
             position: relative;
             overflow: hidden;
         }
@@ -218,12 +224,66 @@
             transform: translateY(-3px);
             box-shadow: 0 12px 40px rgba(74, 222, 128, 0.4);
         }
-        
+
         .hero-cta svg {
             width: 20px;
             height: 20px;
         }
-        
+
+        .hero-stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 24px 0;
+        }
+
+        .hero-stat-card {
+            background: var(--carbon);
+            border: 1px solid var(--zinc);
+            border-radius: 16px;
+            padding: 20px 24px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--red);
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--cloud);
+        }
+
+        .hero-problems {
+            background: transparent;
+            border: none;
+            padding: 0;
+            margin-bottom: 32px;
+        }
+
+        /* Operator Badge */
+        .operator-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.4);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 0.875rem;
+            color: var(--amber);
+            margin-bottom: 24px;
+            font-weight: 500;
+        }
+
+        .badge-icon {
+            font-size: 1rem;
+        }
+
         .hero-visual {
             position: relative;
         }
@@ -312,7 +372,7 @@
         .cost-card .number {
             font-size: 3rem;
             font-weight: 700;
-            color: var(--red);
+            color: var(--green);
             line-height: 1;
             margin-bottom: 8px;
         }
@@ -325,19 +385,19 @@
         .solution {
             position: relative;
         }
-        
+
         .solution-header {
             text-align: center;
             max-width: 700px;
             margin: 0 auto 60px;
         }
-        
+
         .steps {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 32px;
         }
-        
+
         .step {
             background: var(--carbon);
             border: 1px solid var(--zinc);
@@ -347,13 +407,13 @@
             position: relative;
             transition: all 0.3s;
         }
-        
+
         .step:hover {
             transform: translateY(-8px);
             border-color: var(--green);
             box-shadow: 0 20px 40px rgba(74, 222, 128, 0.1);
         }
-        
+
         .step-number {
             width: 48px;
             height: 48px;
@@ -367,15 +427,15 @@
             font-weight: 700;
             margin: 0 auto 24px;
         }
-        
+
         .step h3 {
             margin-bottom: 12px;
         }
-        
+
         .step p {
             font-size: 1rem;
         }
-        
+
         .metrics {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -384,11 +444,11 @@
             padding-top: 60px;
             border-top: 1px solid var(--zinc);
         }
-        
+
         .metric {
             text-align: center;
         }
-        
+
         .metric .value {
             font-size: 2.5rem;
             font-weight: 700;
@@ -396,45 +456,45 @@
             line-height: 1;
             margin-bottom: 8px;
         }
-        
+
         .metric .label {
             color: var(--cloud);
             font-size: 1rem;
         }
-        
+
         /* Credibility Section */
         .credibility {
             background: var(--carbon);
         }
-        
+
         .credibility-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 60px;
             align-items: center;
         }
-        
+
         .credibility-text h2 {
             margin-bottom: 24px;
         }
-        
+
         .credibility-text p {
             margin-bottom: 16px;
         }
-        
+
         .credibility-features {
             display: flex;
             flex-direction: column;
             gap: 16px;
             margin-top: 32px;
         }
-        
+
         .feature {
             display: flex;
             align-items: center;
             gap: 12px;
         }
-        
+
         .feature-icon {
             width: 24px;
             height: 24px;
@@ -445,18 +505,18 @@
             justify-content: center;
             flex-shrink: 0;
         }
-        
+
         .feature-icon svg {
             width: 14px;
             height: 14px;
             color: var(--green);
         }
-        
+
         .feature span {
             color: var(--snow);
             font-weight: 500;
         }
-        
+
         .quote-card {
             background: var(--midnight);
             border: 1px solid var(--zinc);
@@ -464,7 +524,7 @@
             padding: 40px;
             position: relative;
         }
-        
+
         .quote-card::before {
             content: '"';
             font-size: 6rem;
@@ -475,7 +535,7 @@
             left: 30px;
             line-height: 1;
         }
-        
+
         .quote-card p {
             font-size: 1.25rem;
             color: var(--snow);
@@ -483,7 +543,7 @@
             position: relative;
             z-index: 1;
         }
-        
+
         .quote-card .attribution {
             margin-top: 24px;
             font-style: normal;
@@ -491,71 +551,85 @@
             font-size: 1rem;
         }
         
-        /* Pricing Section */
-        .pricing {
-            text-align: center;
+        /* Pricing + Signup Combined Section */
+        .pricing-signup {
+            background: var(--midnight);
+            padding: 80px 0;
         }
-        
-        .pricing-card {
-            max-width: 500px;
-            margin: 40px auto 0;
+
+        .pricing-signup-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .pricing-signup-header h2 {
+            margin-bottom: 12px;
+        }
+
+        .pricing-signup-header p {
+            font-size: 1.125rem;
+        }
+
+        .pricing-signup-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+            align-items: start;
+        }
+
+        .pricing-card-compact {
             background: linear-gradient(135deg, rgba(74, 222, 128, 0.1) 0%, rgba(74, 222, 128, 0.05) 100%);
             border: 2px solid var(--green);
-            border-radius: 24px;
-            padding: 48px;
+            border-radius: 20px;
+            padding: 32px;
         }
-        
+
         .pricing-label {
             text-transform: uppercase;
             letter-spacing: 2px;
-            font-size: 0.875rem;
+            font-size: 0.75rem;
             color: var(--green);
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
-        
+
         .pricing-amount {
             display: flex;
             align-items: baseline;
-            justify-content: center;
-            gap: 8px;
-            margin-bottom: 16px;
+            gap: 4px;
+            margin-bottom: 24px;
         }
-        
+
         .pricing-amount .currency {
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 600;
         }
-        
+
         .pricing-amount .number {
-            font-size: 4rem;
+            font-size: 3rem;
             font-weight: 700;
             line-height: 1;
         }
-        
+
         .pricing-amount .period {
-            font-size: 1.25rem;
-            color: var(--cloud);
-        }
-        
-        .pricing-note {
-            color: var(--cloud);
             font-size: 1rem;
-            margin-bottom: 32px;
+            color: var(--cloud);
         }
-        
+
         .pricing-features {
-            text-align: left;
-            margin-bottom: 32px;
+            margin: 0;
         }
-        
+
         .pricing-features li {
             list-style: none;
-            padding: 8px 0;
-            padding-left: 28px;
+            padding: 6px 0;
+            padding-left: 24px;
             position: relative;
             color: var(--cloud);
+            font-size: 0.95rem;
         }
-        
+
         .pricing-features li::before {
             content: '✓';
             position: absolute;
@@ -563,31 +637,17 @@
             color: var(--green);
             font-weight: 700;
         }
-        
-        /* CTA Section */
-        .cta-section {
-            background: var(--carbon);
-            text-align: center;
-        }
-        
-        .cta-content {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .cta-content h2 {
-            margin-bottom: 16px;
-        }
-        
-        .cta-content > p {
-            margin-bottom: 40px;
+
+        .signup-column {
+            display: flex;
+            flex-direction: column;
         }
         
         .signup-form {
-            background: var(--midnight);
+            background: var(--carbon);
             border: 1px solid var(--zinc);
             border-radius: 20px;
-            padding: 40px;
+            padding: 32px;
         }
         
         .form-group {
@@ -607,7 +667,7 @@
         .form-group select {
             width: 100%;
             padding: 16px;
-            background: var(--carbon);
+            background: var(--midnight);
             border: 1px solid var(--zinc);
             border-radius: 10px;
             color: var(--snow);
@@ -728,58 +788,91 @@
                 grid-template-columns: 1fr;
                 text-align: center;
             }
-            
+
+            .hero-text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
             .hero-text p {
                 margin-left: auto;
                 margin-right: auto;
             }
-            
+
+            .hero-problems {
+                text-align: left;
+            }
+
             .hero-visual {
                 order: -1;
             }
-            
+
             .device-frame {
                 transform: none;
                 max-width: 500px;
                 margin: 0 auto;
             }
-            
+
             .steps {
                 grid-template-columns: 1fr;
                 max-width: 400px;
                 margin: 0 auto;
             }
-            
+
             .metrics {
                 grid-template-columns: 1fr;
                 gap: 32px;
             }
-            
+
             .credibility-content {
                 grid-template-columns: 1fr;
             }
-            
+
+            .pricing-signup-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+            }
+
             .cost-callout {
                 grid-template-columns: 1fr;
             }
         }
-        
+
         @media (max-width: 600px) {
             section {
                 padding: 60px 0;
             }
-            
+
+            .solution-credibility,
+            .pricing-signup {
+                padding: 60px 0;
+            }
+
             .nav-cta {
                 padding: 10px 16px;
                 font-size: 0.875rem;
             }
-            
-            .pricing-card {
-                padding: 32px 24px;
+
+            .pricing-card-compact {
+                padding: 24px;
             }
-            
+
             .signup-form {
                 padding: 24px;
+            }
+
+            .operator-badge {
+                font-size: 0.75rem;
+                padding: 6px 12px;
+            }
+
+            .hero-stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
             }
         }
     </style>
@@ -797,7 +890,7 @@
                 </svg>
                 <span>trasio</span>
             </a>
-            <a href="#signup" class="nav-cta">Get Early Access</a>
+            <a href="#signup" class="nav-cta">Claim Your Spot</a>
         </div>
     </nav>
     
@@ -806,10 +899,32 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>What if shift change took <span class="highlight">5 minutes</span> instead of 30?</h1>
-                    <p>Point your iPad at the shelf. AI counts everything in seconds. Shift closed, documented, done. No more recounting. No more arguments. No more staying late.</p>
+                    <div class="operator-badge">
+                        <span class="badge-icon">🏪</span>
+                        Built by a C-Store Family · 18 Years Behind the Counter
+                    </div>
+                    <h1>The Silent <span class="highlight-red">$18K Tax</span></h1>
+                    <p>Thirty minutes per shift. Counting. Recounting. Arguing over who shorted the Marlboros. That's $18K a year—for a process that still can't tell you where the shrinkage is actually happening.</p>
+
+                    <div class="hero-stats-grid">
+                        <div class="hero-stat-card">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">minutes wasted daily</div>
+                        </div>
+                        <div class="hero-stat-card">
+                            <div class="stat-number">$11.2B</div>
+                            <div class="stat-label">lost in annual shrinkage</div>
+                        </div>
+                    </div>
+
+                    <div class="problem-list hero-problems">
+                        <li>Count the cigarettes. Count again because someone disputes it.</li>
+                        <li>Argue. Recount. Or skip it entirely and fly blind on shrinkage.</li>
+                        <li>Either way, you lose.</li>
+                    </div>
+
                     <a href="#signup" class="hero-cta">
-                        Get Early Access
+                        Join 100 Founding Stores
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
                 </div>
@@ -824,34 +939,6 @@
         </div>
     </section>
     
-    <!-- Problem Section -->
-    <section class="problem">
-        <div class="container">
-            <div class="problem-content">
-                <h2>The <span class="highlight">30-Minute Tax</span></h2>
-                <p>Every shift change, you pay it. Half an hour of counting, recounting, arguing over who shorted the register.</p>
-                
-                <div class="problem-list">
-                    <li>Count the cigarettes. Count again because someone disputes it.</li>
-                    <li>Argue. Recount. Finally close out—late again.</li>
-                    <li>Or skip it entirely and fly blind on shrinkage.</li>
-                    <li>Either way, you lose.</li>
-                </div>
-                
-                <div class="cost-callout">
-                    <div class="cost-card">
-                        <div class="number">50+</div>
-                        <div class="label">minutes wasted daily</div>
-                    </div>
-                    <div class="cost-card">
-                        <div class="number">$18K</div>
-                        <div class="label">in annual labor cost</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
     <!-- Solution Section -->
     <section class="solution">
         <div class="container">
@@ -859,7 +946,7 @@
                 <h2>Point. Scan. <span class="highlight">Done.</span></h2>
                 <p>Trasio uses AI computer vision to count your tobacco case, cooler, and propane in seconds—not minutes.</p>
             </div>
-            
+
             <div class="steps">
                 <div class="step">
                     <div class="step-number">1</div>
@@ -877,7 +964,7 @@
                     <p>Tap confirm. Shift closed. Timestamped. Documented.</p>
                 </div>
             </div>
-            
+
             <div class="metrics">
                 <div class="metric">
                     <div class="value">30 → 5</div>
@@ -894,16 +981,16 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Credibility Section -->
     <section class="credibility">
         <div class="container">
             <div class="credibility-content">
                 <div class="credibility-text">
                     <h2>Built by <span class="highlight">operators</span>, for operators.</h2>
-                    <p>We run convenience stores. We built Trasio because we were tired of the 30-minute tax—and the $50K enterprise systems that claim to solve it.</p>
+                    <p>We've counted 10,000+ shifts the hard way. We built Trasio so you don't have to.</p>
                     <p>This isn't Silicon Valley guessing what retail needs. This is operators building the tool we wished existed.</p>
-                    
+
                     <div class="credibility-features">
                         <div class="feature">
                             <div class="feature-icon">
@@ -931,82 +1018,79 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="quote-card">
-                    <p>Helping run our family c-store for over 18 years, I painfully experienced shift changes. Every shift change was the same story—30 minutes of counting, recounting, and arguing over who shorted the Marlboros. So we fixed it.</p>
+                    <p>Convenience stores that thrive in the next decade won't be the ones with the best coffee or the cleanest bathrooms. They'll be the ones that eliminated operational friction while everyone else was still counting cigarettes by hand.</p>
                     <div class="attribution">— Trasio Founding Team</div>
                 </div>
             </div>
         </div>
     </section>
-    
-    <!-- Pricing Section -->
-    <section class="pricing">
+
+    <!-- Pricing + Signup Combined Section -->
+    <section class="pricing-signup" id="signup">
         <div class="container">
-            <h2>Simple pricing. <span class="highlight">Real savings.</span></h2>
-            <p>Pay less per month than you lose to one shift of wasted time.</p>
-            
-            <div class="pricing-card">
-                <div class="pricing-label">Early Access Pricing</div>
-                <div class="pricing-amount">
-                    <span class="currency">$</span>
-                    <span class="number">99</span>
-                    <span class="period">/month per store</span>
-                </div>
-                <div class="pricing-note">Lock in founder pricing for life when you join early.</div>
-                
-                <ul class="pricing-features">
-                    <li>Unlimited shift verifications</li>
-                    <li>Cigarettes, beer, propane coverage</li>
-                    <li>Timestamped documentation</li>
-                    <li>Works on any iPad</li>
-                    <li>Email support</li>
-                </ul>
-                
-                <a href="#signup" class="submit-btn">Join the Waitlist</a>
+            <div class="pricing-signup-header">
+                <h2>Ready to <span class="highlight">eliminate the friction</span>?</h2>
+                <p>First 100 stores lock in founder pricing for life.</p>
             </div>
-        </div>
-    </section>
-    
-    <!-- CTA Section -->
-    <section class="cta-section" id="signup">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to close shifts in <span class="highlight">5 minutes</span>?</h2>
-                <p>Join the waitlist. Early access members get founder pricing locked in for life.</p>
-                
-                <div class="signup-form" id="signupForm">
-                    <div class="form-error" id="formError">Something went wrong. Please try again.</div>
-                    <form id="waitlistForm">
-                        <input type="hidden" name="access_key" id="accessKey" value="">
-                        <input type="hidden" name="subject" value="New Trasio Waitlist Signup">
-                        <input type="hidden" name="from_name" value="Trasio Waitlist">
-                        
-                        <div class="form-group">
-                            <label for="email">Email address *</label>
-                            <input type="email" id="email" name="email" placeholder="you@yourstore.com" required>
+
+            <div class="pricing-signup-grid">
+                <!-- Left: Pricing -->
+                <div class="pricing-column">
+                    <div class="pricing-card-compact">
+                        <div class="pricing-label">Founder Pricing</div>
+                        <div class="pricing-amount">
+                            <span class="currency">$</span>
+                            <span class="number">99</span>
+                            <span class="period">/month per store</span>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="locations">How many store locations?</label>
-                            <select id="locations" name="locations">
-                                <option value="1">1 location</option>
-                                <option value="2-5">2-5 locations</option>
-                                <option value="6-10">6-10 locations</option>
-                                <option value="10+">10+ locations</option>
-                            </select>
-                        </div>
-                        
-                        <button type="submit" class="submit-btn" id="submitBtn">Get Early Access</button>
-                        
-                        <p class="form-note">No spam. Just updates on launch and early access.</p>
-                    </form>
+
+                        <ul class="pricing-features">
+                            <li>Unlimited shift verifications</li>
+                            <li>Cigarettes, beer, propane coverage</li>
+                            <li>Timestamped documentation</li>
+                            <li>Works on any iPad</li>
+                            <li>Email support</li>
+                        </ul>
+                    </div>
                 </div>
-                
-                <div class="form-success" id="formSuccess">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                    <h3>You're on the list!</h3>
-                    <p>We'll email you when early access opens. Thanks for joining us.</p>
+
+                <!-- Right: Signup Form -->
+                <div class="signup-column">
+                    <div class="signup-form" id="signupForm">
+                        <div class="form-error" id="formError">Something went wrong. Please try again.</div>
+                        <form id="waitlistForm">
+                            <input type="hidden" name="access_key" id="accessKey" value="">
+                            <input type="hidden" name="subject" value="New Trasio Waitlist Signup">
+                            <input type="hidden" name="from_name" value="Trasio Waitlist">
+
+                            <div class="form-group">
+                                <label for="email">Email address *</label>
+                                <input type="email" id="email" name="email" placeholder="you@yourstore.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="locations">How many store locations?</label>
+                                <select id="locations" name="locations">
+                                    <option value="1">1 location</option>
+                                    <option value="2-5">2-5 locations</option>
+                                    <option value="6-10">6-10 locations</option>
+                                    <option value="10+">10+ locations</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="submit-btn" id="submitBtn">Claim Your Spot</button>
+
+                            <p class="form-note">No spam. Just updates on launch and early access.</p>
+                        </form>
+                    </div>
+
+                    <div class="form-success" id="formSuccess">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <h3>You're on the list!</h3>
+                        <p>We'll email you when early access opens. Thanks for joining us.</p>
+                    </div>
                 </div>
             </div>
         </div>
