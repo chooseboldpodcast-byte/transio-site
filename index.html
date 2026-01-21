@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trasio — Count in seconds. Close in minutes.</title>
-    <meta name="description" content="AI-powered shift verification for convenience stores. Turn 30-minute counts into 5-minute closes.">
-    
+    <title>Trasio — Shift handoffs, solved.</title>
+    <meta name="description" content="Two cashiers. Same shelf. Different numbers. Not anymore. AI-powered shift verification for c-stores. The 5-minute shift close.">
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://trasio.app/">
-    
+
     <!-- Open Graph -->
-    <meta property="og:title" content="Trasio — The 5-Minute Shift Close">
-    <meta property="og:description" content="Point your iPad at the shelf. AI counts everything. Shift closed.">
+    <meta property="og:title" content="Trasio — Shift handoffs, solved.">
+    <meta property="og:description" content="Two cashiers. Same shelf. Different numbers. Not anymore. The 5-minute shift close for c-stores.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://trasio.app/">
     <meta property="og:image" content="https://trasio.app/og-image.png">
@@ -21,8 +21,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Trasio — The 5-Minute Shift Close">
-    <meta name="twitter:description" content="Point your iPad at the shelf. AI counts everything. Shift closed.">
+    <meta name="twitter:title" content="Trasio — Shift handoffs, solved.">
+    <meta name="twitter:description" content="Two cashiers. Same shelf. Different numbers. Not anymore. The 5-minute shift close for c-stores.">
     <meta name="twitter:image" content="https://trasio.app/og-image.png">
     
     <!-- Fonts -->
@@ -195,13 +195,34 @@
         }
         
         .hero-text h1 {
-            margin-bottom: 24px;
+            margin-bottom: 16px;
         }
-        
+
         .hero-text p {
             font-size: 1.25rem;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             max-width: 500px;
+        }
+
+        .hero-context {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--stone);
+            margin-bottom: 12px;
+        }
+
+        .hero-subhead {
+            font-size: 1.5rem;
+            color: var(--cloud);
+            margin-bottom: 32px;
+        }
+
+        .hero-pivot {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--snow);
+            margin-bottom: 40px;
         }
         
         .hero-cta {
@@ -228,60 +249,6 @@
         .hero-cta svg {
             width: 20px;
             height: 20px;
-        }
-
-        .hero-stats-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin: 24px 0;
-        }
-
-        .hero-stat-card {
-            background: var(--carbon);
-            border: 1px solid var(--zinc);
-            border-radius: 16px;
-            padding: 20px 24px;
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--red);
-            line-height: 1;
-            margin-bottom: 6px;
-        }
-
-        .stat-label {
-            font-size: 1rem;
-            color: var(--cloud);
-        }
-
-        .hero-problems {
-            background: transparent;
-            border: none;
-            padding: 0;
-            margin-bottom: 32px;
-        }
-
-        /* Operator Badge */
-        .operator-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(245, 158, 11, 0.1);
-            border: 1px solid rgba(245, 158, 11, 0.4);
-            padding: 8px 16px;
-            border-radius: 100px;
-            font-size: 0.875rem;
-            color: var(--amber);
-            margin-bottom: 24px;
-            font-weight: 500;
-        }
-
-        .badge-icon {
-            font-size: 1rem;
         }
 
         .hero-visual {
@@ -392,48 +359,102 @@
             margin: 0 auto 60px;
         }
 
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
+        .solution-intro {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--green);
+            margin-bottom: 8px;
         }
 
-        .step {
-            background: var(--carbon);
-            border: 1px solid var(--zinc);
-            border-radius: 20px;
-            padding: 40px 32px;
-            text-align: center;
-            position: relative;
-            transition: all 0.3s;
-        }
-
-        .step:hover {
-            transform: translateY(-8px);
-            border-color: var(--green);
-            box-shadow: 0 20px 40px rgba(74, 222, 128, 0.1);
-        }
-
-        .step-number {
-            width: 48px;
-            height: 48px;
-            background: var(--green);
-            color: var(--midnight);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin: 0 auto 24px;
-        }
-
-        .step h3 {
+        .solution-header h2 {
             margin-bottom: 12px;
         }
 
-        .step p {
+        /* Narrative Flow */
+        .narrative-flow {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .narrative-block {
+            background: var(--carbon);
+            border: 1px solid var(--zinc);
+            border-radius: 20px;
+            padding: 32px;
+        }
+
+        .narrative-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--stone);
+            margin-bottom: 12px;
+        }
+
+        .narrative-block h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            color: var(--snow);
+        }
+
+        .narrative-block p {
             font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .narrative-visual {
+            display: flex;
+            justify-content: center;
+        }
+
+        .scan-demo {
+            position: relative;
+            text-align: center;
+        }
+
+        .scan-demo-frame {
+            background: #1a1a1a;
+            border-radius: 20px;
+            padding: 8px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            overflow: hidden;
+        }
+
+        .scan-demo-frame video {
+            width: 100%;
+            max-width: 280px;
+            border-radius: 12px;
+            display: block;
+        }
+
+        .scan-verified {
+            margin-top: 16px;
+        }
+
+        .verified-badge {
+            display: inline-block;
+            background: rgba(74, 222, 128, 0.15);
+            border: 1px solid var(--green);
+            color: var(--green);
+            padding: 8px 20px;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            letter-spacing: 1px;
+        }
+
+        .solution-outcome {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .outcome-text {
+            font-size: 1.5rem;
+            color: var(--cloud);
         }
 
         .metrics {
@@ -460,6 +481,68 @@
         .metric .label {
             color: var(--cloud);
             font-size: 1rem;
+        }
+
+        /* Bigger Picture Section */
+        .bigger-picture {
+            background: var(--midnight);
+            padding: 100px 0;
+        }
+
+        .bigger-picture-content {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .bigger-picture-text h2 {
+            margin-bottom: 12px;
+        }
+
+        .bigger-picture-subhead {
+            font-size: 1.25rem;
+            color: var(--green);
+            margin-bottom: 16px;
+        }
+
+        .bigger-picture-text > p {
+            margin-bottom: 24px;
+        }
+
+        .visibility-list {
+            list-style: none;
+        }
+
+        .visibility-list li {
+            padding: 10px 0;
+            padding-left: 28px;
+            position: relative;
+            color: var(--cloud);
+            font-size: 1rem;
+        }
+
+        .visibility-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--green);
+            font-weight: 700;
+        }
+
+        .dashboard-frame {
+            background: var(--carbon);
+            border: 1px solid var(--zinc);
+            border-radius: 16px;
+            padding: 16px;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.4);
+        }
+
+        .dashboard-frame img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
         }
 
         /* Credibility Section */
@@ -560,6 +643,15 @@
         .pricing-signup-header {
             text-align: center;
             margin-bottom: 48px;
+        }
+
+        .pricing-signup-header .tagline {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--green);
+            margin-bottom: 12px;
+            font-weight: 600;
         }
 
         .pricing-signup-header h2 {
@@ -800,10 +892,6 @@
                 margin-right: auto;
             }
 
-            .hero-problems {
-                text-align: left;
-            }
-
             .hero-visual {
                 order: -1;
             }
@@ -814,15 +902,30 @@
                 margin: 0 auto;
             }
 
-            .steps {
+            .narrative-flow {
                 grid-template-columns: 1fr;
-                max-width: 400px;
-                margin: 0 auto;
+                gap: 24px;
+            }
+
+            .narrative-visual {
+                order: -1;
+            }
+
+            .scan-demo-frame video {
+                max-width: 240px;
             }
 
             .metrics {
                 grid-template-columns: 1fr;
                 gap: 32px;
+            }
+
+            .bigger-picture-content {
+                grid-template-columns: 1fr;
+            }
+
+            .bigger-picture-visual {
+                order: -1;
             }
 
             .credibility-content {
@@ -844,7 +947,10 @@
                 padding: 60px 0;
             }
 
-            .solution-credibility,
+            .bigger-picture {
+                padding: 60px 0;
+            }
+
             .pricing-signup {
                 padding: 60px 0;
             }
@@ -862,17 +968,20 @@
                 padding: 24px;
             }
 
-            .operator-badge {
-                font-size: 0.75rem;
-                padding: 6px 12px;
+            .hero-pivot {
+                font-size: 1.5rem;
             }
 
-            .hero-stats-grid {
-                grid-template-columns: 1fr;
+            .hero-subhead {
+                font-size: 1.25rem;
             }
 
-            .stat-number {
-                font-size: 2.5rem;
+            .narrative-block {
+                padding: 24px;
+            }
+
+            .outcome-text {
+                font-size: 1.25rem;
             }
         }
     </style>
@@ -899,29 +1008,11 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <div class="operator-badge">
-                        <span class="badge-icon">🏪</span>
-                        Built by a C-Store Family · 18 Years Behind the Counter
-                    </div>
-                    <h1>The Silent <span class="highlight-red">$18K Tax</span></h1>
-                    <p>Thirty minutes per shift. Counting. Recounting. Arguing over who shorted the Marlboros. That's $18K a year—for a process that still can't tell you where the shrinkage is actually happening.</p>
+                    <p class="hero-context">Last Tuesday.</p>
+                    <h1>Two cashiers. Same shelf. <span class="highlight-red">Different numbers.</span></h1>
+                    <p class="hero-subhead">Argued for <span class="highlight-red">26 minutes</span>. You paid both of them.</p>
 
-                    <div class="hero-stats-grid">
-                        <div class="hero-stat-card">
-                            <div class="stat-number">50+</div>
-                            <div class="stat-label">minutes wasted daily</div>
-                        </div>
-                        <div class="hero-stat-card">
-                            <div class="stat-number">$11.2B</div>
-                            <div class="stat-label">lost in annual shrinkage</div>
-                        </div>
-                    </div>
-
-                    <div class="problem-list hero-problems">
-                        <li>Count the cigarettes. Count again because someone disputes it.</li>
-                        <li>Argue. Recount. Or skip it entirely and fly blind on shrinkage.</li>
-                        <li>Either way, you lose.</li>
-                    </div>
+                    <p class="hero-pivot">Not anymore.</p>
 
                     <a href="#signup" class="hero-cta">
                         Join 100 Founding Stores
@@ -931,7 +1022,7 @@
                 <div class="hero-visual">
                     <div class="device-frame">
                         <div class="device-screen">
-                            <video src="demo-video.mp4" autoplay loop muted playsinline></video>
+                            <video src="FINAL_COPY3_TRASIO.mp4" autoplay loop muted playsinline></video>
                         </div>
                     </div>
                 </div>
@@ -943,26 +1034,40 @@
     <section class="solution">
         <div class="container">
             <div class="solution-header">
-                <h2>Point. Scan. <span class="highlight">Done.</span></h2>
-                <p>Trasio uses AI computer vision to count your tobacco case, cooler, and propane in seconds—not minutes.</p>
+                <p class="solution-intro">Meet Trasio.</p>
+                <h2>The <span class="highlight">5-minute</span> shift close.</h2>
+                <p>Count in seconds. Close in minutes.</p>
             </div>
 
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Point</h3>
-                    <p>Aim your iPad at the tobacco case, cooler, or propane cage.</p>
+            <!-- Narrative: Sarah's shift ending -->
+            <div class="narrative-flow">
+                <div class="narrative-block">
+                    <div class="narrative-label">The story begins</div>
+                    <h3>Sarah's shift is ending.</h3>
+                    <p>She points her iPad at the shelf. AI counts <span class="highlight">189 packs</span> in seconds. She confirms and clocks out.</p>
                 </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Scan</h3>
-                    <p>AI detects and counts every pack, can, and tank instantly.</p>
+
+                <div class="narrative-visual">
+                    <!-- Placeholder for scan loop GIF/video -->
+                    <div class="scan-demo">
+                        <div class="scan-demo-frame">
+                            <video src="scan-loop.mp4" autoplay loop muted playsinline></video>
+                        </div>
+                        <div class="scan-verified">
+                            <span class="verified-badge">✓ VERIFIED</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Done</h3>
-                    <p>Tap confirm. Shift closed. Timestamped. Documented.</p>
+
+                <div class="narrative-block">
+                    <div class="narrative-label">The handoff</div>
+                    <h3>Mike arrives.</h3>
+                    <p>One look. Counts match. Handoff complete. <span class="highlight">You didn't pay for a single wasted minute.</span> No one stays late.</p>
                 </div>
+            </div>
+
+            <div class="solution-outcome">
+                <p class="outcome-text"><span class="highlight">Zero disputes.</span> Outgoing confirms. Incoming verifies. Clean handoff.</p>
             </div>
 
             <div class="metrics">
@@ -982,14 +1087,38 @@
         </div>
     </section>
 
+    <!-- The Bigger Picture Section -->
+    <section class="bigger-picture">
+        <div class="container">
+            <div class="bigger-picture-content">
+                <div class="bigger-picture-text">
+                    <h2>See every shift. <span class="highlight">Track every count.</span></h2>
+                    <p class="bigger-picture-subhead">Even when you're not there.</p>
+                    <p>At home. On the road. Day off. You'll always know exactly what's happening.</p>
+                    <ul class="visibility-list">
+                        <li>Every variance, flagged automatically</li>
+                        <li>Shift-over-shift comparison</li>
+                        <li>Shrinkage patterns you couldn't see before</li>
+                    </ul>
+                </div>
+                <div class="bigger-picture-visual">
+                    <!-- Dashboard mockup placeholder -->
+                    <div class="dashboard-frame">
+                        <img src="dashboard-preview.png" alt="Trasio Dashboard showing shift counts and variance tracking">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Credibility Section -->
     <section class="credibility">
         <div class="container">
             <div class="credibility-content">
                 <div class="credibility-text">
                     <h2>Built by <span class="highlight">operators</span>, for operators.</h2>
-                    <p>We've counted 10,000+ shifts the hard way. We built Trasio so you don't have to.</p>
-                    <p>This isn't Silicon Valley guessing what retail needs. This is operators building the tool we wished existed.</p>
+                    <p>We've counted 10,000+ shifts the hard way and built Trasio so you don't have to.</p>
+                    <p>This isn't Silicon Valley guessing what retail needs. This is operators building the technology enabler we wished existed for the corner stores to challenge the big retailers.</p>
 
                     <div class="credibility-features">
                         <div class="feature">
@@ -1031,8 +1160,9 @@
     <section class="pricing-signup" id="signup">
         <div class="container">
             <div class="pricing-signup-header">
-                <h2>Ready to <span class="highlight">eliminate the friction</span>?</h2>
-                <p>First 100 stores lock in founder pricing for life.</p>
+                <p class="tagline">Shift handoffs, solved.</p>
+                <h2>Join <span class="highlight">100 Founding Stores</span></h2>
+                <p>Lock in founder pricing for life.</p>
             </div>
 
             <div class="pricing-signup-grid">
