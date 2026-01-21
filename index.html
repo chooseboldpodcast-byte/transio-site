@@ -189,8 +189,8 @@
         
         .hero-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 40px;
             align-items: center;
         }
         
@@ -257,10 +257,9 @@
         
         .device-frame {
             background: #1a1a1a;
-            border-radius: 32px;
-            padding: 12px;
+            border-radius: 24px;
+            padding: 10px;
             box-shadow: 0 40px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.1);
-            transform: perspective(1000px) rotateY(-5deg) rotateX(2deg);
         }
         
         .device-screen {
@@ -686,27 +685,46 @@
             margin-bottom: 12px;
         }
 
+        .pricing-original {
+            margin-bottom: 8px;
+        }
+
+        .strikethrough {
+            color: var(--stone);
+            text-decoration: line-through;
+            font-size: 1.25rem;
+        }
+
         .pricing-amount {
             display: flex;
             align-items: baseline;
             gap: 4px;
-            margin-bottom: 24px;
+            margin-bottom: 4px;
         }
 
         .pricing-amount .currency {
             font-size: 1.5rem;
             font-weight: 600;
+            color: var(--green);
         }
 
         .pricing-amount .number {
             font-size: 3rem;
             font-weight: 700;
             line-height: 1;
+            color: var(--green);
         }
 
         .pricing-amount .period {
-            font-size: 1rem;
+            font-size: 1.125rem;
+            color: var(--green);
+            font-weight: 600;
+        }
+
+        .pricing-per-store {
+            font-size: 0.875rem;
             color: var(--cloud);
+            margin-bottom: 24px;
         }
 
         .pricing-features {
@@ -1170,11 +1188,15 @@
                 <div class="pricing-column">
                     <div class="pricing-card-compact">
                         <div class="pricing-label">Founder Pricing</div>
+                        <div class="pricing-original">
+                            <span class="strikethrough">$99/month</span>
+                        </div>
                         <div class="pricing-amount">
                             <span class="currency">$</span>
                             <span class="number">99</span>
-                            <span class="period">/month per store</span>
+                            <span class="period">for 4 months</span>
                         </div>
+                        <p class="pricing-per-store">per store</p>
 
                         <ul class="pricing-features">
                             <li>Unlimited shift verifications</li>
