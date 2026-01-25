@@ -1,0 +1,7 @@
+# Robots.txt for trasio.app
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://trasio.app/sitemap.xml
