@@ -214,9 +214,9 @@
         
         .hero-content {
             display: grid;
-            grid-template-columns: 1.3fr 1fr;
-            gap: 60px;
-            align-items: center;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 48px;
+            align-items: stretch;
         }
         
         .seo-headline {
@@ -229,11 +229,11 @@
         }
 
         .hero-headline {
-            font-size: clamp(2.2rem, 5vw, 3.2rem);
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
             letter-spacing: -0.02em;
             font-weight: 600;
-            line-height: 1.2;
-            margin-bottom: 16px;
+            line-height: 1.15;
+            margin-bottom: 20px;
         }
 
         .hero-text p {
@@ -257,12 +257,11 @@
         }
 
         .hero-pivot {
-            font-size: 2.5rem;
+            font-size: 2.75rem;
             font-weight: 700;
             color: var(--snow);
-            margin-bottom: 40px;
-            text-align: center;
-            margin-top: 32px;
+            margin-bottom: 32px;
+            margin-top: 24px;
         }
         
         .hero-cta {
@@ -293,21 +292,24 @@
 
         .hero-visual {
             position: relative;
+            display: flex;
+            align-items: center;
         }
-        
+
         .device-frame {
             background: #1a1a1a;
             border-radius: 24px;
-            padding: 10px;
+            padding: 12px;
             box-shadow: 0 40px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.1);
+            width: 100%;
         }
-        
+
         .device-screen {
             border-radius: 14px;
             overflow: hidden;
             position: relative;
         }
-        
+
         .device-screen img {
             width: 100%;
             height: auto;
@@ -1095,12 +1097,12 @@
                 <div class="hero-text">
                     <h1 class="seo-headline">Shift Handoff Software for C-Stores, Gas Stations, & Restaurants.</h1>
                     <!-- <p class="hero-context">Last Tuesday.</p>-->
-                    <h2 class="hero-headline">Two cashiers. Same shelf. <span class="highlight-red">Different numbers.</span></h2>
+                    <h2 class="hero-headline">Two cashiers.<br>Same shelf.<br><span class="highlight-red">Different numbers.</span></h2>
                     <p class="hero-subhead">Argued for <span class="highlight-red">26 minutes</span>. <span class="highlight-red" style="font-weight: 700;">You paid both of them.</span></p>
 
                     <p class="hero-pivot">Not anymore.</p>
 
-                    <a href="#signup" class="hero-cta" style="display: flex; margin: 0 auto;">
+                    <a href="#signup" class="hero-cta">
                         Join 100 Founding Stores
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
