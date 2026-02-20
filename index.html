@@ -571,12 +571,23 @@
         }
 
         .quote-standalone cite {
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
             margin-top: 24px;
             font-style: normal;
             font-size: 1rem;
             color: var(--cloud);
             font-weight: 500;
+        }
+
+        .quote-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center top;
         }
 
         /* Bigger Picture Section */
@@ -1189,7 +1200,10 @@
         <div class="container">
             <blockquote class="quote-standalone">
                 <p>"Convenience stores that thrive in the next decade won't be the ones with the best coffee or the cleanest bathrooms. They'll be the ones that eliminated operational friction while everyone else was still counting cigarettes by hand."</p>
-                <cite>— Manoj, Founder </cite>
+                <cite>
+                    <img src="manoj-founder.jpeg" alt="Manoj, Founder" class="quote-avatar">
+                    — Manoj, Founder
+                </cite>
             </blockquote>
         </div>
     </section>
