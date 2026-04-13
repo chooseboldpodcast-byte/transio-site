@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision AI at the Edge for Convenience Retail | Trasio</title>
+    <meta name="description" content="C-stores run on shelves they can't see. Here's why the POS lies, why cycle counts fail, and how vision AI running on-device finally closes the gap.">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="vision AI c-store, edge AI retail, shelf visibility, convenience store inventory, on-device computer vision, c-store shrink">
+
+    <link rel="canonical" href="https://trasio.app/blog/c-store-inventory-vision-ai.html">
+
+    <meta property="og:title" content="Why Convenience Retail Still Can't See Their Shelves">
+    <meta property="og:description" content="The POS tells you what sold. It doesn't tell you what's on the shelf. Here's how vision AI at the edge closes the gap.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://trasio.app/blog/c-store-inventory-vision-ai.html">
+    <meta property="og:image" content="https://trasio.app/blog/cashier-counting-cigarettes-cstore.jpg">
+    <meta property="article:published_time" content="2026-04-12">
+    <meta property="article:author" content="Manoj Bhardwaj">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Why Convenience Retail Still Can't See Their Shelves">
+    <meta name="twitter:description" content="The POS tells you what sold. It doesn't tell you what's on the shelf. Here's how vision AI at the edge closes the gap.">
+    <meta name="twitter:image" content="https://trasio.app/blog/cashier-counting-cigarettes-cstore.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/svg+xml" href="../trasio-icon.svg">
+    <link rel="icon" type="image/png" sizes="180x180" href="../trasio-icon-180.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../trasio-icon-180.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Why Convenience Retail Still Can't See Their Shelves (And How Vision AI at the Edge Fixes It)",
+        "description": "C-stores run on shelves they can't see. Here's why the POS lies, why cycle counts fail, and how vision AI running on-device finally closes the gap.",
+        "author": { "@type": "Person", "name": "Manoj Bhardwaj" },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Trasio",
+            "logo": { "@type": "ImageObject", "url": "https://trasio.app/trasio-icon-180.png" }
+        },
+        "datePublished": "2026-04-12",
+        "image": "https://trasio.app/blog/cashier-counting-cigarettes-cstore.jpg",
+        "mainEntityOfPage": "https://trasio.app/blog/c-store-inventory-vision-ai.html"
+    }
+    </script>
+
+    <style>
+        :root {
+            --green: #4ADE80;
+            --green-dark: #22C55E;
+            --midnight: #09090B;
+            --carbon: #18181B;
+            --zinc: #27272A;
+            --stone: #71717A;
+            --cloud: #A1A1AA;
+            --snow: #FAFAFA;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--midnight);
+            color: var(--snow);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+        .container-wide { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            padding: 20px 0;
+            background: rgba(9, 9, 11, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        nav .container-wide { display: flex; justify-content: space-between; align-items: center; }
+        .nav-right { display: flex; align-items: center; gap: 28px; }
+        .nav-link { color: var(--cloud); text-decoration: none; font-weight: 500; font-size: 15px; transition: color 0.2s; }
+        .nav-link:hover { color: var(--snow); }
+        .logo { display: flex; align-items: center; text-decoration: none; }
+        .logo img { height: 36px; width: auto; display: block; }
+        .nav-cta {
+            background: var(--green); color: var(--midnight);
+            padding: 12px 24px; border-radius: 8px;
+            font-weight: 600; text-decoration: none; transition: all 0.2s;
+        }
+        .nav-cta:hover { background: var(--green-dark); transform: translateY(-2px); }
+
+        article { padding: 140px 0 80px; }
+
+        .post-header { margin-bottom: 48px; }
+        .breadcrumb {
+            color: var(--stone); font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .breadcrumb a { color: var(--cloud); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--green); }
+
+        .eyebrow {
+            display: inline-block;
+            color: var(--green);
+            font-size: 13px; font-weight: 600;
+            letter-spacing: 0.08em; text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        h1 {
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 700; line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 24px;
+        }
+        .post-meta {
+            color: var(--stone); font-size: 14px;
+            display: flex; gap: 12px; align-items: center;
+        }
+        .post-meta .dot { width: 3px; height: 3px; background: var(--stone); border-radius: 50%; }
+
+        .hero-image {
+            width: 100%;
+            border-radius: 14px;
+            display: block;
+            margin: 0 0 48px;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .prose { font-size: 17px; color: #E4E4E7; }
+        .prose p { margin-bottom: 22px; }
+        .prose h2 {
+            font-size: 28px; font-weight: 600;
+            letter-spacing: -0.01em;
+            margin: 56px 0 18px;
+            color: var(--snow);
+        }
+        .prose h3 {
+            font-size: 20px; font-weight: 600;
+            margin: 36px 0 12px;
+            color: var(--snow);
+        }
+        .prose strong { color: var(--snow); font-weight: 600; }
+        .prose ul, .prose ol { margin: 0 0 22px 24px; }
+        .prose li { margin-bottom: 10px; color: #E4E4E7; }
+        .prose a { color: var(--green); text-decoration: underline; text-underline-offset: 3px; }
+        .prose blockquote {
+            border-left: 3px solid var(--green);
+            padding: 8px 0 8px 20px;
+            margin: 28px 0;
+            color: var(--cloud);
+            font-style: italic;
+        }
+        .prose hr {
+            border: none;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            margin: 48px 0;
+        }
+        .callout {
+            background: var(--carbon);
+            border: 1px solid rgba(74, 222, 128, 0.2);
+            border-left: 3px solid var(--green);
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin: 28px 0;
+            color: #E4E4E7;
+        }
+
+        .cta-strip {
+            background: var(--carbon);
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding: 64px 0;
+            text-align: center;
+        }
+        .cta-strip h3 { font-size: 28px; font-weight: 600; margin-bottom: 20px; letter-spacing: -0.01em; }
+        .cta-strip a {
+            display: inline-block;
+            background: var(--green); color: var(--midnight);
+            padding: 14px 28px; border-radius: 8px;
+            font-weight: 600; text-decoration: none;
+            transition: all 0.2s;
+        }
+        .cta-strip a:hover { background: var(--green-dark); transform: translateY(-2px); }
+
+        footer {
+            padding: 40px 0; text-align: center;
+            color: var(--stone); font-size: 14px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        footer a { color: var(--cloud); text-decoration: none; }
+        footer a:hover { color: var(--snow); }
+
+        @media (max-width: 640px) {
+            article { padding: 110px 0 60px; }
+            .prose { font-size: 16px; }
+            .nav-right { gap: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container-wide">
+            <a href="/" class="logo">
+                <img src="../trasio-wordmark-dark.svg" alt="trasio">
+            </a>
+            <div class="nav-right">
+                <a href="/blog.html" class="nav-link">Blog</a>
+                <a href="/#signup" class="nav-cta">Claim Your Spot</a>
+            </div>
+        </div>
+    </nav>
+
+    <article>
+        <div class="container">
+            <div class="post-header">
+                <div class="breadcrumb"><a href="/blog.html">← Blog</a></div>
+                <span class="eyebrow">Vision AI · Operations</span>
+                <h1>Why Convenience Retail Still Can't See Their Shelves (And How Vision AI at the Edge Fixes It)</h1>
+                <div class="post-meta">
+                    <span>April 12, 2026</span>
+                    <span class="dot"></span>
+                    <span>8 min read</span>
+                    <span class="dot"></span>
+                    <span>By Manoj Bhardwaj</span>
+                </div>
+            </div>
+
+            <img src="cashier-counting-cigarettes-cstore.jpg" alt="Cashier using a tablet to count cigarette inventory on convenience store shelves" class="hero-image">
+
+            <div class="prose">
+                <p>A POS system will tell you what <em>should</em> be on the shelf. Receiving minus sales. Simple math. The trouble is, that number drifts. Packs get misplaced, transactions get mis-scanned, shrinkage happens between counts. For tobacco — the highest-value, most regulated category in the store — the expected number is not good enough. You need the actual number, especially at shift change, where the count is how <a href="/">c-store shift handoff software</a> establishes accountability between the outgoing and incoming cashier. And the only way to get the actual number is to count.</p>
+
+                <p>My father has operated a convenience store for over 18 years and for all of them I have been there with him. I know what it looks like when a cashier counts 600+ cigarette facings by hand while customers wait. It happens at over 150,000 independent c-stores in the US (per NACS industry data), and the method has not changed in decades.</p>
+
+                <p>But this is not about cigarette counting. That is one symptom of a larger gap: independent retailers have no fast, reliable way to <a href="/">verify shelf inventory at shift close</a>. The gap has persisted because the solutions that exist were built for chains with six-figure budgets and dedicated IT teams — not for a store with three employees and a tablet.</p>
+
+                <h2>Why the Obvious Solutions Fail</h2>
+
+                <p>Cloud-based computer vision exists. Enterprise camera systems exist. Planogram compliance tools exist for big chains. None of these work for an independent store running on thin margins with unreliable WiFi and no technical staff. Store-grade internet drops unpredictably, per-inference API costs do not pencil at c-store margins, and store owners are not enthusiastic about streaming shelf images to someone else's servers.</p>
+
+                <p>But infrastructure is only half the problem. An independent operator running a store with three employees does not have the bandwidth to evaluate, install, or learn a new system.</p>
+
+                <blockquote>If the solution does not work the moment it is picked up, it does not get adopted.</blockquote>
+
+                <h2>Running AI on Device</h2>
+
+                <p>This is what led me to vision AI at the edge — inference entirely on-device, not as a technical preference, but as the only architecture that survives contact with the actual operating environment.</p>
+
+                <p>But "edge AI" sounds cleaner than it is. When your target device is a $200 Android tablet — not an NVIDIA Jetson, not a dedicated vision system — the constraints get real. Model size budgets in tens of megabytes. Inference under a second because a cashier will not wait longer. Memory shared with the OS and every other app on the device.</p>
+
+                <p>Making a model run reliably on a consumer tablet — hardware never designed for this workload — is a different engineering problem than just training the model. You do not get to specify your hardware when your customer is a mom-and-pop store. I didn't want to and so I built for what they already own. Unit economics also dictated the edge architecture.</p>
+
+                <h2>Why a Handheld Changes the Problem</h2>
+
+                <p>Shelf-scanning AI is not new. Fixed-camera systems already monitor shelves for large grocery and drug chains — mounted cameras capturing images at regular intervals, processed in the cloud. For a chain with IT staff and per-store installation budgets, these work.</p>
+
+                <p>An independent c-store is not installing cameras above every shelf. The alternative is a handheld device: a tablet a cashier picks up at shift change and points at the shelf. That changes the computer vision problem fundamentally.</p>
+
+                <p>A fixed camera has a controlled angle, consistent lighting, and a known distance to the shelf. A handheld device has none of that. You get fluorescent lights that shift hue throughout the day, reflective packaging at unpredictable angles, hands reaching into frame, and shelves organized differently at every location.</p>
+
+                <div class="callout">
+                    What matters is accuracy on the worst shelf, in the worst lighting, held by the least careful user. That is a harder bar than what fixed-camera systems are designed to clear — and it is where the real engineering effort lives.
+                </div>
+
+                <h2>Why Now</h2>
+
+                <p>Three things have converged that make this possible in a way it was not five years ago.</p>
+
+                <p><strong>First,</strong> mobile chips in consumer-grade tablets have crossed a real threshold for on-device inference. Compute that required dedicated hardware three years ago now runs on devices costing a fraction of the price.</p>
+
+                <p><strong>Second,</strong> the economics for our customer. Labor costs are rising and independent retail margins are compressing.</p>
+
+                <p><strong>Third,</strong> the regulatory pressure. Tobacco compliance requirements are tightening at the state and federal level. Track-and-trace mandates are expanding. Independent stores are being asked to do more verification with the same or fewer staff. A fast, reliable counting tool is moving from nice-to-have toward operational necessity.</p>
+
+                <p>This pattern extends beyond convenience stores. Pharmacy shelves, warehouse receiving, field equipment inspection — anywhere you need on-demand visual understanding and cannot assume cloud connectivity or expensive hardware, the same approach applies. Run perception at the edge, on hardware that already exists in the environment.</p>
+
+                <h2>What Changes When a Store Can See</h2>
+
+                <p>When a store can verify its own shelves on demand, the immediate effects are tangible. Inventory accuracy improves. Shift accountability becomes instant rather than contested. Compliance verification takes minutes, not a manual audit.</p>
+
+                <p>The cashier who spent 30 minutes counting now spends 5 verifying with <a href="/">automated cigarette inventory counting</a>. The AI is not replacing anyone. It is removing the most tedious part of their shift.</p>
+
+                <p>But the bigger point: for the first time, a $200 tablet gives an independent store the same shelf awareness that a national chain gets from a six-figure investment. That is a structural shift in who gets access to operational intelligence.</p>
+
+                <p>A cashier picks up a tablet, scans the cigarette shelf, and in five minutes knows exactly what is there. Puts the tablet down, closes the shift, moves on. The store knows what it has — not what the system says, not what someone remembers, what is actually on the shelf.</p>
+
+                <p>That is not the future of anything. That is a Tuesday.</p>
+
+                <p>This is what we are building at <a href="/">Trasio</a>.</p>
+            </div>
+        </div>
+    </article>
+
+    <section class="cta-strip">
+        <div class="container-wide">
+            <h3>Close shifts in 5 minutes. Verified. Documented. Done.</h3>
+            <a href="/#signup">Join 100 Founding Stores</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container-wide">
+            <p>&copy; 2026 Trasio. &nbsp;·&nbsp; <a href="/">Home</a> &nbsp;·&nbsp; <a href="/blog.html">Blog</a></p>
+        </div>
+    </footer>
+</body>
+</html>

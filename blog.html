@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Trasio — C-Store Shift Handoff & Inventory</title>
+    <meta name="description" content="Operator insights on shift handoffs, inventory counts, and running a better c-store or gas station.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://trasio.app/blog.html">
+
+    <meta property="og:title" content="Trasio Blog">
+    <meta property="og:description" content="Operator insights on shift handoffs, inventory counts, and running a better c-store.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://trasio.app/blog.html">
+    <meta property="og:image" content="https://trasio.app/og-image.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/svg+xml" href="trasio-icon.svg">
+    <link rel="icon" type="image/png" sizes="180x180" href="trasio-icon-180.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="trasio-icon-180.png">
+
+    <style>
+        :root {
+            --green: #4ADE80;
+            --green-dark: #22C55E;
+            --midnight: #09090B;
+            --carbon: #18181B;
+            --zinc: #27272A;
+            --stone: #71717A;
+            --cloud: #A1A1AA;
+            --snow: #FAFAFA;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--midnight);
+            color: var(--snow);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            padding: 20px 0;
+            background: rgba(9, 9, 11, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        nav .container { display: flex; justify-content: space-between; align-items: center; }
+        .nav-right { display: flex; align-items: center; gap: 28px; }
+        .nav-link { color: var(--cloud); text-decoration: none; font-weight: 500; font-size: 15px; transition: color 0.2s; }
+        .nav-link:hover { color: var(--snow); }
+        .logo { display: flex; align-items: center; text-decoration: none; }
+        .logo img { height: 36px; width: auto; display: block; }
+        .nav-cta {
+            background: var(--green); color: var(--midnight);
+            padding: 12px 24px; border-radius: 8px;
+            font-weight: 600; text-decoration: none; transition: all 0.2s;
+        }
+        .nav-cta:hover { background: var(--green-dark); transform: translateY(-2px); }
+
+        .blog-hero { padding: 180px 0 60px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .eyebrow {
+            display: inline-block;
+            color: var(--green);
+            font-size: 14px; font-weight: 600;
+            letter-spacing: 0.08em; text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        .blog-hero h1 {
+            font-size: clamp(40px, 6vw, 64px);
+            font-weight: 700; line-height: 1.05;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+        .blog-hero p {
+            font-size: 18px; color: var(--cloud);
+            max-width: 640px;
+        }
+
+        .posts { padding: 64px 0 120px; }
+        .post-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+        }
+        .post-card {
+            background: var(--carbon);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 16px;
+            padding: 28px;
+            text-decoration: none;
+            color: inherit;
+            display: flex; flex-direction: column;
+            transition: transform 0.2s, border-color 0.2s, background 0.2s;
+        }
+        .post-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(74, 222, 128, 0.3);
+            background: var(--zinc);
+        }
+        .post-meta {
+            font-size: 13px; color: var(--stone);
+            margin-bottom: 12px;
+            display: flex; gap: 10px; align-items: center;
+        }
+        .post-tag {
+            background: rgba(74, 222, 128, 0.1);
+            color: var(--green);
+            padding: 3px 10px; border-radius: 999px;
+            font-weight: 600; font-size: 12px;
+            letter-spacing: 0.03em;
+        }
+        .post-card h2 {
+            font-size: 22px; font-weight: 600;
+            line-height: 1.3; margin-bottom: 12px;
+            letter-spacing: -0.01em;
+        }
+        .post-card p {
+            color: var(--cloud); font-size: 15px;
+            margin-bottom: 20px; flex-grow: 1;
+        }
+        .post-card .read-more {
+            color: var(--green); font-weight: 600; font-size: 14px;
+            display: inline-flex; align-items: center; gap: 6px;
+        }
+
+        .cta-strip {
+            background: var(--carbon);
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding: 64px 0;
+            text-align: center;
+        }
+        .cta-strip h3 {
+            font-size: 28px; font-weight: 600;
+            margin-bottom: 20px; letter-spacing: -0.01em;
+        }
+        .cta-strip a {
+            display: inline-block;
+            background: var(--green); color: var(--midnight);
+            padding: 14px 28px; border-radius: 8px;
+            font-weight: 600; text-decoration: none;
+            transition: all 0.2s;
+        }
+        .cta-strip a:hover { background: var(--green-dark); transform: translateY(-2px); }
+
+        footer {
+            padding: 40px 0; text-align: center;
+            color: var(--stone); font-size: 14px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        footer a { color: var(--cloud); text-decoration: none; }
+        footer a:hover { color: var(--snow); }
+
+        @media (max-width: 640px) {
+            .blog-hero { padding: 140px 0 40px; }
+            .posts { padding: 40px 0 80px; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="trasio-wordmark-dark.svg" alt="trasio">
+            </a>
+            <div class="nav-right">
+                <a href="/blog.html" class="nav-link">Blog</a>
+                <a href="/#signup" class="nav-cta">Claim Your Spot</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="blog-hero">
+        <div class="container">
+            <span class="eyebrow">The Trasio Blog</span>
+            <h1>Notes from the back office.</h1>
+            <p>Field-tested thinking on shift handoffs, inventory counts, shrink, and running a calmer c-store.</p>
+        </div>
+    </header>
+
+    <main class="posts">
+        <div class="container">
+            <div class="post-grid">
+                <a href="blog/c-store-inventory-vision-ai.html" class="post-card">
+                    <div class="post-meta">
+                        <span class="post-tag">Vision AI</span>
+                        <span>8 min read</span>
+                    </div>
+                    <h2>Why Convenience Retail Still Can't See Their Shelves (And How Vision AI at the Edge Fixes It)</h2>
+                    <p>The POS tells you what <em>should</em> be on the shelf. For tobacco — the highest-value, most regulated category in the store — the expected number is not good enough. Here's how on-device vision AI closes the gap.</p>
+                    <span class="read-more">Read post →</span>
+                </a>
+
+            </div>
+        </div>
+    </main>
+
+    <section class="cta-strip">
+        <div class="container">
+            <h3>Close shifts in 5 minutes. Verified. Documented. Done.</h3>
+            <a href="/#signup">Join 100 Founding Stores</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Trasio. &nbsp;·&nbsp; <a href="/">Home</a></p>
+        </div>
+    </footer>
+</body>
+</html>

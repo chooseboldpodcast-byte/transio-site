@@ -177,6 +177,20 @@
             display: block;
         }
         
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+        .nav-link {
+            color: var(--cloud);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+        .nav-link:hover { color: var(--snow); }
+
         .nav-cta {
             background: var(--green);
             color: var(--midnight);
@@ -1096,7 +1110,10 @@
             <a href="#" class="logo">
                 <img src="trasio-wordmark-dark.svg" alt="trasio">
             </a>
-            <a href="#signup" class="nav-cta">Claim Your Spot</a>
+            <div class="nav-right">
+                <a href="/blog.html" class="nav-link">Blog</a>
+                <a href="#signup" class="nav-cta">Claim Your Spot</a>
+            </div>
         </div>
     </nav>
     
