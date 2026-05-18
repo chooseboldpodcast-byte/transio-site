@@ -864,15 +864,11 @@
         margin: 0 0 10px;
       }
 
-      .pricing-original {
-        margin: 0 0 8px;
-      }
-
-      .pricing-strikethrough {
-        color: var(--color-accent);
-        text-decoration: line-through;
-        font-size: 1.25rem;
-        font-weight: 500;
+      .pricing-scarcity {
+        font-size: 11px;
+        font-style: italic;
+        color: var(--color-text-muted);
+        margin: 0 0 16px;
       }
 
       .pricing-amount {
@@ -905,6 +901,12 @@
       .pricing-per-store {
         font-size: 14px;
         color: var(--color-text-muted);
+        margin: 0 0 2px;
+      }
+
+      .pricing-anchor {
+        font-size: 13px;
+        color: rgba(20, 20, 20, 0.5);
         margin: 0 0 24px;
       }
 
@@ -930,6 +932,32 @@
         color: var(--color-primary);
         flex-shrink: 0;
         margin-top: 3px;
+      }
+
+      .pricing-cta {
+        display: block;
+        width: 100%;
+        padding: 14px 20px;
+        margin: 0 0 4px;
+        background: var(--color-primary);
+        color: #041309;
+        border: 1px solid transparent;
+        border-radius: 16px;
+        font-size: 15px;
+        font-weight: 600;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        transition: filter 0.15s;
+      }
+
+      .pricing-cta:hover {
+        filter: brightness(0.96);
+      }
+
+      .pricing-cta:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.35);
       }
 
       .pricing-footnote {
@@ -1539,15 +1567,16 @@
             </header>
 
             <div class="pricing-row">
-              <article class="pricing-card" aria-label="Trasio ShiftClose founder pricing">
-                <p class="pricing-card-eyebrow">Founder pricing</p>
-                <p class="pricing-original"><span class="pricing-strikethrough">$89/month</span></p>
+              <article class="pricing-card" aria-label="Trasio ShiftClose Founding Stores pricing">
+                <p class="pricing-card-eyebrow">Founding Stores</p>
+                <p class="pricing-scarcity">Limited to the first 50 operators</p>
                 <p class="pricing-amount">
                   <span class="currency">$</span>
                   <span class="number">39</span>
                   <span class="period">/month</span>
                 </p>
-                <p class="pricing-per-store">per store</p>
+                <p class="pricing-per-store">per store, locked for life</p>
+                <p class="pricing-anchor">Standard pricing: $149/month</p>
                 <ul class="pricing-features">
                   <li>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -1573,7 +1602,14 @@
                     </svg>
                     White-glove setup + email support
                   </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                    Direct line to the founder
+                  </li>
                 </ul>
+                <a class="pricing-cta" href="#signup">Claim your Founding Store spot</a>
                 <p class="pricing-footnote">30-day trial · Cancel anytime</p>
               </article>
 
