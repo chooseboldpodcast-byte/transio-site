@@ -284,6 +284,27 @@
         margin-bottom: 16px;
       }
 
+      .hero-recognition {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 20px;
+      }
+
+      .hero-recognition-label {
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: var(--color-eyebrow);
+      }
+
+      .hero-recognition-badge {
+        display: block;
+        width: 92px;
+        height: auto;
+      }
+
       .hero-visual-shell {
         border-radius: var(--radius-md);
         border: 1px solid var(--color-border);
@@ -330,7 +351,7 @@
         margin: 0 auto;
         padding: 26px 20px 24px;
         display: grid;
-        grid-template-columns: 1.3fr 1fr 1.1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 32px;
         font-size: 13px;
         align-items: start;
@@ -1253,6 +1274,10 @@
                 <a class="btn" href="#signup">Start a 5-minute shift close</a>
                 <a class="btn-secondary" href="FINAL_COPY4_TRASIO.mp4" data-open-demo>Watch a 90-second demo</a>
               </div>
+              <div class="hero-recognition">
+                <span class="hero-recognition-label">Recognized by</span>
+                <img class="hero-recognition-badge" src="nvidia-inception-program-badge-rgb-for-screen.jpg" alt="NVIDIA Inception Program member" />
+              </div>
             </div>
 
             <div class="hero-visual-shell" aria-hidden="true">
@@ -1266,11 +1291,6 @@
 
         <section class="proof-band" aria-label="Credibility">
           <div class="proof-grid">
-            <article>
-              <div class="proof-label">Recognized by</div>
-              <img class="proof-badge" src="nvidia-inception-program-badge-rgb-for-screen.jpg" alt="NVIDIA Inception Program member" />
-            </article>
-
             <article>
               <div class="proof-label">Engineered for the edge</div>
               <p class="proof-note">
