@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why the Corner Store Is the Hardest Place to Get Retail AI Right | Trasio</title>
+    <meta name="description" content="Retail vision was built for big brands and big budgets. Why the neighborhood gas station and convenience store is the hardest place to make it actually work — and why product data, not the model, is now the hard part.">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="RetailAI, ComputerVision, PhysicalAI, CPG, EdgeComputing, retail vision, on-device AI, convenience store, gas station, product gallery, shelf vision">
+
+    <link rel="canonical" href="https://trasio.app/blog/corner-store-hardest-place-retail-ai.html">
+
+    <meta property="og:title" content="Why the Corner Store Is the Hardest Place to Get Retail AI Right">
+    <meta property="og:description" content="Retail vision was built for big brands and big budgets. Why the corner store is the hardest place to make it work — and why product data, not the model, is now the hard part.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://trasio.app/blog/corner-store-hardest-place-retail-ai.html">
+    <meta property="og:image" content="https://trasio.app/og-image.png">
+    <meta property="article:published_time" content="2026-05-30">
+    <meta property="article:author" content="Manoj Bhardwaj">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Why the Corner Store Is the Hardest Place to Get Retail AI Right">
+    <meta name="twitter:description" content="Retail vision was built for big brands and big budgets. Why the corner store is the hardest place to make it work — and why product data, not the model, is now the hard part.">
+    <meta name="twitter:image" content="https://trasio.app/og-image.png">
+
+    <link rel="icon" type="image/svg+xml" href="../trasio-icon.svg">
+    <link rel="icon" type="image/png" sizes="180x180" href="../trasio-icon-180.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../trasio-icon-180.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Why the Corner Store Is the Hardest Place to Get Retail AI Right",
+        "description": "Retail vision was built for big brands and big budgets. Why the neighborhood gas station and convenience store is the hardest place to make it actually work — and why product data, not the model, is now the hard part.",
+        "author": { "@type": "Person", "name": "Manoj Bhardwaj" },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Trasio",
+            "logo": { "@type": "ImageObject", "url": "https://trasio.app/trasio-icon-180.png" }
+        },
+        "datePublished": "2026-05-30",
+        "image": "https://trasio.app/og-image.png",
+        "mainEntityOfPage": "https://trasio.app/blog/corner-store-hardest-place-retail-ai.html"
+    }
+    </script>
+
+    <style>
+      :root {
+        --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+        --color-bg: #f3f3f1;
+        --color-surface: #fafaf8;
+        --color-border: rgba(40, 37, 29, 0.12);
+        --color-text: #141414;
+        --color-text-muted: rgba(20, 20, 20, 0.68);
+        --color-primary: #2ECC71;
+        --color-primary-soft: rgba(46, 204, 113, 0.11);
+        --radius-sm: 6px;
+        --radius-md: 12px;
+        --radius-lg: 20px;
+        --radius-pill: 100px;
+        --shadow-soft: 0 18px 48px rgba(24, 23, 20, 0.08);
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        font-family: var(--font-sans);
+        background: radial-gradient(circle at top left, #f9faf7, #f3f3f1 52%);
+        color: var(--color-text);
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .container { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+      .container-wide { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        backdrop-filter: blur(12px);
+        background: color-mix(in srgb, var(--color-bg) 92%, transparent);
+        border-bottom: 1px solid rgba(40, 37, 29, 0.06);
+        padding: 20px 0;
+      }
+
+      .nav-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .logo img { height: 28px; width: auto; display: block; }
+
+      .nav-links {
+        display: flex;
+        gap: 18px;
+        font-size: 14px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: var(--color-text-muted);
+      }
+
+      .nav-links a:hover { color: var(--color-text); }
+
+      .btn {
+        background: var(--color-primary);
+        color: #041309;
+        border: 1px solid rgba(20, 130, 70, 0.6);
+        border-radius: 16px;
+        padding: 9px 18px;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      article { padding: 56px 0 80px; }
+
+      .post-header { margin-bottom: 40px; }
+
+      .breadcrumb {
+        font-size: 14px;
+        color: var(--color-text-muted);
+        margin-bottom: 18px;
+      }
+
+      .breadcrumb a {
+        color: var(--color-text-muted);
+        text-decoration: none;
+      }
+
+      .breadcrumb a:hover { color: var(--color-primary); }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: rgba(20, 20, 20, 0.72);
+        margin-bottom: 16px;
+      }
+
+      .eyebrow::before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        border-radius: var(--radius-pill);
+        background: var(--color-primary);
+      }
+
+      .post-header h1 {
+        font-size: clamp(30px, 4.5vw, 44px);
+        font-weight: 700;
+        line-height: 1.15;
+        letter-spacing: -0.03em;
+        margin: 0 0 22px;
+      }
+
+      .post-meta {
+        color: var(--color-text-muted);
+        font-size: 14px;
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .post-meta .dot {
+        width: 3px;
+        height: 3px;
+        background: var(--color-text-muted);
+        border-radius: 50%;
+      }
+
+      .prose {
+        font-size: 17px;
+        color: var(--color-text);
+        line-height: 1.7;
+      }
+
+      .prose p { margin: 0 0 22px; }
+
+      .prose strong { font-weight: 600; color: var(--color-text); }
+
+      .prose a {
+        color: var(--color-primary);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        text-decoration-thickness: 1px;
+      }
+
+      .prose a:hover { text-decoration-thickness: 2px; }
+
+      .prose h2 {
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin: 56px 0 18px;
+        color: var(--color-text);
+      }
+
+      .prose h3 {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 36px 0 12px;
+        color: var(--color-text);
+      }
+
+      .prose ul, .prose ol { margin: 0 0 22px 24px; }
+      .prose li { margin-bottom: 10px; }
+
+      .prose blockquote {
+        border-left: 3px solid var(--color-primary);
+        padding: 6px 0 6px 22px;
+        margin: 28px 0;
+        color: var(--color-text-muted);
+        font-style: italic;
+        font-size: 18px;
+      }
+
+      .prose hr {
+        border: none;
+        border-top: 1px solid rgba(40, 37, 29, 0.1);
+        margin: 48px 0;
+      }
+
+      .callout {
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-left: 3px solid var(--color-primary);
+        border-radius: var(--radius-md);
+        padding: 20px 24px;
+        margin: 28px 0;
+        color: var(--color-text);
+      }
+
+      .post-tags {
+        margin-top: 48px;
+        padding-top: 24px;
+        border-top: 1px solid rgba(40, 37, 29, 0.1);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .post-tags span {
+        font-size: 12px;
+        color: var(--color-text-muted);
+        background: var(--color-primary-soft);
+        border-radius: var(--radius-pill);
+        padding: 4px 12px;
+      }
+
+      .cta-strip {
+        background: rgba(255, 255, 255, 0.8);
+        border-top: 1px solid rgba(40, 37, 29, 0.06);
+        padding: 60px 0;
+        text-align: center;
+      }
+
+      .cta-strip h3 {
+        font-size: 28px;
+        font-weight: 600;
+        margin: 0 0 22px;
+        letter-spacing: -0.02em;
+      }
+
+      .cta-strip .btn {
+        padding: 14px 28px;
+        font-size: 15px;
+      }
+
+      .site-footer {
+        padding: 22px 0;
+        border-top: 1px solid rgba(40, 37, 29, 0.08);
+        background: rgba(255, 255, 255, 0.55);
+      }
+
+      .footer-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        font-size: 13px;
+        color: var(--color-text-muted);
+      }
+
+      .footer-row p { margin: 0; }
+
+      .footer-row a {
+        color: var(--color-text-muted);
+        text-decoration: none;
+      }
+
+      .footer-row a:hover { color: var(--color-text); }
+
+      @media (max-width: 640px) {
+        article { padding: 36px 0 64px; }
+        .prose { font-size: 16px; }
+        .footer-row { flex-direction: column; text-align: center; }
+      }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+      <div class="container-wide">
+        <div class="nav-row">
+          <a class="logo" href="/" aria-label="Trasio home">
+            <img src="../trasio-wordmark-light.svg" alt="Trasio">
+          </a>
+          <nav class="nav-links" aria-label="Primary">
+            <a href="/#product">Product</a>
+            <a href="/#technology">Technology</a>
+            <a href="/#pricing">Pricing</a>
+            <a href="/blog.html">Blog</a>
+          </nav>
+          <a class="btn" href="/#signup">Join Founding Stores</a>
+        </div>
+      </div>
+    </header>
+
+    <article>
+      <div class="container">
+        <div class="post-header">
+          <div class="breadcrumb"><a href="/blog.html">← Blog</a></div>
+          <span class="eyebrow">Vision AI · Operations</span>
+          <h1>Why the corner store is the hardest place to get retail AI right</h1>
+          <div class="post-meta">
+            <span>May 30, 2026</span>
+            <span class="dot"></span>
+            <span>5 min read</span>
+            <span class="dot"></span>
+            <span>By Manoj Bhardwaj</span>
+          </div>
+        </div>
+
+        <div class="prose">
+          <p>For eighteen years, my father has owned and operated a gas station and convenience store. I have worked in the business for most of that time, and I have spent years talking with other store owners about the same problems. What I know about budgets, vendor pitches, and what actually gets used at the counter comes from being inside those decisions, not from reading reports.</p>
+
+          <p>That is why I think the corner store is one of the hardest places to make retail AI work.</p>
+
+          <p>For years, retail vision mostly made sense for big brands and big retailers. Field teams took photos, those photos were sent to the cloud, and the results went back to headquarters. In many cases, large CPG brands were the ones paying for that visibility inside big retailers because the sales volume justified it. That was never a good fit for the neighborhood gas station or convenience store.</p>
+
+          <p>Most retail still happens in places like this, but the software model was built around very different buyers and very different budgets.</p>
+
+          <p>You can already see that shift happening. In July 2025, Trax launched its On-Device IR product. To me, that was a clear sign that even companies built around cloud-based retail vision were moving toward something stores could actually run locally.</p>
+
+          <p>The problem is simple: small stores do not have much room in the budget for extra software. The same monthly spend has to cover the POS, payments, cameras, and everything else needed to keep the store running. If your product adds a processing bill every time someone scans a shelf, it is already too expensive for most stores.</p>
+
+          <p>That is why running the model on the device matters. It cuts out the extra cost tied to every scan and makes the product cheap enough to fit the reality of the store.</p>
+
+          <p>But that still does not make the product work.</p>
+
+          <p>Starbucks is a good example. NomadGo’s system ran on the device, and Starbucks still shut it off after using it in stores. Starbucks had every reason to make it work, and it still did not. If a system can break down there, it says something about how hard this problem is in practice, even before you get down to smaller stores with tighter margins and less room for error.</p>
+
+          <p>And the problem was not where the model ran. The problem was trust. If workers scan a shelf and the system confuses similar items, misses products, or gives a count they do not believe, they still have to stop and count it again by hand. Once that happens, the software has not removed the work. It has added another step before the real work gets done.</p>
+
+          <p>That is the part that matters most to me. In a real store, nobody cares whether the model is running in the cloud or on the device if the answer is wrong. They care whether they can trust the result enough to move on with their day. If they cannot, the product breaks down right there.</p>
+
+          <p>That is why I think the hard part is no longer just the model. It is the product data behind it.</p>
+
+          <p>A general retail model is becoming easier to get. What you cannot just buy is a product gallery that can reliably tell Marlboro Red apart from Marlboro Red 100s under fluorescent lighting, from the angle a convenience-store shelf is actually seen, and still hold up when the packaging changes a few months later.</p>
+
+          <p>Anyone who has worked in one of these stores knows how small those differences can be. That kind of product data gets better slowly and store by store. Every shelf image helps. That is the part that is hard to shortcut.</p>
+
+          <p>I also think a lot of people are looking at the wrong problem. In convenience stores, the labor is already there. Cashiers and stockers already restock shelves, count product, and keep the place moving. The real problem is that they are doing it without good information, and getting that information usually takes too much manual work.</p>
+
+          <p>That is the gap we care about.</p>
+
+          <p>I started Trasio in October 2025 because we kept coming back to the same conclusion from inside the store: the software in small stores is not bad. The problem is that most of it runs separately unless the operator does the work to tie it together. Lottery inventory, invoices, bills of lading, and payment records all end up being checked and rechecked by hand.</p>
+
+          <p>The first thing we are building is the part of the day that has cost my father the most: shift change. Every time one cashier hands the register to the next, both of them can spend half an hour counting cigarettes and lottery. If something is off later, no one knows which shift it happened on. A tablet pointed at the shelf can do that count in a few minutes, both cashiers can sign off, and accountability stops being a guess.</p>
+
+          <p>So far we have labeled 5,500+ shelf images across nine locations, covering 112 SKUs in two categories.</p>
+
+          <p>That is where we started. Over time, the same system can cover more of how a small store actually runs.</p>
+
+          <p>If you run or manage stores like this, or you are building in this space, I would like to hear from you — <a href="/">trasio.app</a>.</p>
+
+          <div class="post-tags">
+            <span>#RetailAI</span>
+            <span>#ComputerVision</span>
+            <span>#PhysicalAI</span>
+            <span>#CPG</span>
+            <span>#EdgeComputing</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <section class="cta-strip">
+      <div class="container-wide">
+        <h3>Close shifts in 5 minutes. Verified. Documented. Done.</h3>
+        <a class="btn" href="/#signup">Join Founding Stores</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container-wide footer-row">
+        <p>© 2026 Trasio. Built by operators, for operators.</p>
+        <a href="/blog.html">Blog</a>
+      </div>
+    </footer>
+</body>
+</html>

@@ -8,9 +8,15 @@
   </url>
   <url>
     <loc>https://trasio.app/blog.html</loc>
-    <lastmod>2026-04-12</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trasio.app/blog/corner-store-hardest-place-retail-ai.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://trasio.app/blog/c-store-inventory-vision-ai.html</loc>
