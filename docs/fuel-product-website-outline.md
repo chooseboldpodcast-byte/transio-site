@@ -24,7 +24,7 @@ Grounded in: the canonical positioning ("Perception AI for retail" — the perce
 Pick the multi-product structure. **Recommended: (B).**
 
 - **(A) Everything on home, add a fuel section** — fastest, but home gets long and the products blur.
-- **(B) Platform home + per-product pages** *(recommended)* — `/shiftclose` and `/fuel`. Current deep ShiftClose content moves to `/shiftclose`; home keeps hero + a two-product split + top proof.
+- **(B) Platform home + per-product pages** *(recommended)* — `/shiftclose` and `/fuelmatch`. Current deep ShiftClose content moves to `/shiftclose`; home keeps hero + a two-product split + top proof.
 - **(C) Two near-separate microsites** — overkill; fractures brand + SEO.
 
 Everything below assumes (B).
@@ -46,11 +46,11 @@ Everything below assumes (B).
 
 A second designer's full page copy added three ideas stronger than this outline had — adopt them:
 
-1. **FuelMatch is software + SERVICE, not just a detector — the biggest upgrade.** Trasio doesn't only flag a bad load; **Trasio works the dispute with BP on the operator's behalf** (makes the calls/emails, verifies the charge is reversed or never collected). For time-poor owner-operators this is a far stronger value prop and a real moat — *"automation without building a back-office reconciliation team."* Reframe the product as a **managed service with software underneath** (this also unlocks value-based pricing vs. a flat tool fee).
+1. **FuelMatch is software + SERVICE, not just a detector — the biggest upgrade.** Trasio doesn't only flag a bad load; **Trasio works the dispute with the vendor on the operator's behalf** (makes the calls/emails, verifies the charge is reversed or never collected). For time-poor owner-operators this is a far stronger value prop and a real moat — *"automation without building a back-office reconciliation team."* Reframe the product as a **managed service with software underneath** (this also unlocks value-based pricing vs. a flat tool fee).
 2. **Name the three charges in operator language** (use these on the public page instead of the engine's status names):
    - **Phantom Delivery Charge** — invoiced for a load with no BOL on file *(= `missing_bol`)*. Hero example: 8,800 gal × $4.50 = **$39,600**.
-   - **Volume Overbilling** — invoice gallons > BOL gallons *(= `gallons_mismatch`, BP > BOL)*. Example: BOL 8,000 vs invoice 8,800 → 800 × $4.50 = $3,600.
-   - **Price Variance** — invoice $/gal > your contract rack price *(NEW dimension — not built yet; see §5)*.
+   - **Volume Overbilling** — invoice gallons > BOL gallons *(= `gallons_mismatch`, invoice > BOL)*. Example: BOL 8,000 vs invoice 8,800 → 800 × $4.50 = $3,600.
+   - **Price Variance** — invoice $/gal > your contract rack price *(coded but HIDDEN — off all public copy until it ships; see §5)*.
 3. **Use the bank as the ticking clock, not a feature.** *"The bank auto-draft can pay the invoice before anyone checks"* creates urgency (*catch it before the draft clears*) without claiming bank reconciliation — fully compatible with the no-bank-claim decision, and it sharpens it.
 
 Also adopt: a **calm-confidence hero** — *"Know your fuel bill is right"* — paired with the loss proof beneath it (more on-brand than a pure loss-aversion headline); an explicit **ShiftClose platform-fit** section; and **consultative CTAs** ("Talk to us about FuelMatch" / "Schedule a walkthrough").
@@ -64,27 +64,32 @@ Also adopt: a **calm-confidence hero** — *"Know your fuel bill is right"* — 
 ## 2. Site structure changes
 
 - **Nav:** `Product` → **`Products ▾`** dropdown (ShiftClose · FuelMatch). Keep `Technology · Pricing · Blog`. CTA stays "Join Founding Stores."
-- **Home hero:** unchanged headline; add a one-line product subhead or thin band under it: *"Two products on one perception layer — close shifts in 5 minutes, and catch every fuel delivery you overpaid."*
-- **New "Two products" split section** (after hero, before deep content): two cards — ShiftClose (saves time) / FuelMatch (recovers money) — each linking to its page.
+- **New "Two products" section** (after hero, before "Engineered for the Edge") — ready copy from the designer (price-variance language removed per the hidden-feature decision):
+  - **Label:** `TWO WAYS TRASIO PROTECTS YOUR STORE`
+  - **Headline:** "Every shift. Every fuel load. Covered."
+  - **Subhead:** "Trasio runs on the tablets you already own — closing shifts in minutes and making sure your fuel invoices match what you actually got."
+  - **Card 1 — `SHIFT MANAGEMENT` · Trasio ShiftClose:** "Close shifts in 5 minutes. AI counts inventory behind the counter, timestamps every handoff, and flags disputes automatically. No barcode guns, no nightly recount loop." → "See ShiftClose →" (`/shiftclose`)
+  - **Card 2 — `FUEL RECONCILIATION` · Trasio FuelMatch:** "Scan the BOL in the app. Trasio checks it against your vendor invoice. If something doesn't match, our team contacts the vendor and works the case — so you don't have to." → "See FuelMatch →" (`/fuelmatch`)
+  - **Platform one-liner under both cards:** "One platform. One login. Two protections — for the shelf behind the counter and the fuel in your tanks."
 - **`/shiftclose`** — existing deep content (Sarah/Mike scenarios, three benefits, Inside ShiftClose) moves here largely as-is.
-- **`/fuel`** — new page (section outline in §3).
+- **`/fuelmatch`** — new page (section outline in §3).
 - **Pricing page** — FuelMatch shows **"Contact us"** for now (no published price), consistent with the consultative CTA; ShiftClose pricing unchanged.
 - **Footer** — add Products links.
 
 ---
 
-## 3. The `/fuel` product page — section by section
+## 3. The `/fuelmatch` product page — section by section
 
 Mirror the ShiftClose page *rhythm* (same family) but lead with money:
 
 Merged best-of-both structure (calm hero, money proof, the software+service model, the named charges):
 
 1. **Hero** — calm-confidence headline *"Know your fuel bill is right"* + money subhead (*"...stop paying for fuel you never got"*) with the proof stat (#4) nearby. CTAs: *"Talk to us about FuelMatch"* / *"See how FuelMatch works."*
-2. **The problem** — a load lives in four places (the truck, the paper BOL at the store, the BP Portal invoice, the bank draft); nobody matches them by hand; **the auto-draft can pay before anyone checks** (the ticking clock). Callout: the $39,600 phantom example.
-3. **What FuelMatch does — software + service** (3 beats): (a) your store scans the BOL; (b) FuelMatch checks the invoice gallons + price against the BOL; (c) **Trasio works the dispute with BP — not you.**
-4. **The proof (made concrete)** — lead with **"8,800 gallons invoiced, no BOL on file → $39,600 you should not pay."** Back it with the over-billing case *"BP billed 142 gallons more than the truck dropped."* Show the number, not an adjective.
-5. **The three charges FuelMatch catches** — cards: **Phantom Delivery** ($39,600) · **Volume Overbilling** ($3,600 on 800 gal) · **Price Variance** (cents/gal that compound) *(Price Variance = roadmap, §5)*.
-6. **Software that watches, service that works** — two columns. Left (software): BOL scanner, automatic reading, BOL↔invoice matching, the reconciliation dashboard, SMS/in-app alerts. Right (service): human exception review, runs the BP calls/emails for you, verifies the charge is reversed. One-liner: *"automation without a back-office reconciliation team."*
+2. **The problem** — a load lives in four places (the truck, the paper BOL at the store, the Vendor Portal invoice, the bank draft); nobody matches them by hand; **the auto-draft can pay before anyone checks** (the ticking clock). Callout: the $39,600 phantom example.
+3. **What FuelMatch does — software + service** (3 beats): (a) your store scans the BOL; (b) FuelMatch checks the invoice gallons against the BOL; (c) **Trasio works the dispute with the vendor — not you.**
+4. **The proof (made concrete)** — lead with **"8,800 gallons invoiced, no BOL on file → $39,600 you should not pay."** Back it with the over-billing case *"Vendor billed 142 gallons more than the truck dropped."* Show the number, not an adjective.
+5. **The charges FuelMatch catches** — two public cards: **Phantom Delivery** ($39,600 *example*) · **Volume Overbilling** ($3,600 on 800 gal). *(Price Variance is coded but hidden — keep it off the page until it ships, then it becomes a third card.)*
+6. **Software that watches, service that works** — two columns. Left (software): BOL scanner, automatic reading, BOL↔invoice matching, the reconciliation dashboard, SMS/in-app alerts. Right (service): human exception review, runs the vendor calls/emails for you, verifies the charge is reversed. One-liner: *"automation without a back-office reconciliation team."*
 7. **What changes for an owner-operator** — Fewer surprises · Less hassle (your team scans; Trasio chases) · Protected margin (one caught load pays for it).
 8. **Inside FuelMatch** — dashboard screenshots: exception-first reconciliation view (ranked "needs attention" cards), the green-headed Fuel Purchases report, an SMS-alert mockup.
 9. **Platform fit** — runs alongside ShiftClose on the same tablets + login; ShiftClose protects cash/inventory at handoff, FuelMatch protects fuel spend.
@@ -108,19 +113,43 @@ The 30-second flaw a sharp visitor would catch: **selling capabilities that aren
 
 - **Alerting claim — KEPT (decision 2026-06-15).** "Discrepancy alerts to your phone" stays as a benefit. It is not built yet (workstream K.32, blocked), so this is now a **commitment**: build alerting for the first founding cohort so the promise holds when they sign.
 - **Bank claim — OFF the page (decision 2026-06-15).** Public claim is two-way **BOL ↔ invoice**, which is deployable today and is exactly what the $39,600 "invoiced, no BOL" finding proves. Three-way bank/EFT reconciliation stays internal roadmap until Plaid is wired (invoice-# limitation).
-- **The $39,600 headline figure** should be grounded in a real or representative audit before it leads the page — a fabricated ROI stat is the one thing that breaks trust on a money product. The audit lead magnet backstops this: it proves value with the operator's own data instead of a stated stat.
-- **The "we work the BP dispute for you" service is founder-led concierge today**, not a staffed back-office. Do-things-that-don't-scale is right for the founding cohort — but stage the language so it doesn't imply a team that doesn't exist.
-- **Price Variance isn't built.** The engine reconciles BOL↔invoice gallons today; it does not yet ingest the operator's contract rack price to compare. Present Price Variance as the third charge "coming," or wire contract-price ingestion before claiming it. (Phantom + Volume Overbilling are real now.)
-- **"Checks invoices in the background / pulls the BP Portal invoice" oversells automation** — invoice intake is manual entry or email-forward today (a BP Portal pull is roadmap). Soften "background/automatic" to match.
+- **The $39,600 figure is REPRESENTATIVE, not a real recovery (confirmed 2026-06-15).** So label it on the page as an **example/illustration** ("e.g., 8,800 gal invoiced with no BOL = $39,600") — never as "we recovered $X for a store." The audit lead magnet supplies the operator's real number; that's where a true recovery stat comes from later.
+- **The "we work the vendor dispute for you" service is founder-led concierge today**, not a staffed back-office. Do-things-that-don't-scale is right for the founding cohort — but stage the language so it doesn't imply a team that doesn't exist.
+- **Price Variance = coded but hidden (decision 2026-06-15).** Build the contract-rack-price check behind a flag, but keep it OFF all public copy — page cards, home card, SEO meta, OG — until it ships. Public surface = two charges (Phantom Delivery + Volume Overbilling). Re-add Price Variance copy + the "price errors" keyword when it goes live.
+- **"Checks invoices in the background / pulls the Vendor Portal invoice" oversells automation** — invoice intake is manual entry or email-forward today (a Vendor Portal pull is roadmap). Soften "background/automatic" to match.
 
 ---
 
 ## 6. Open decisions / inputs needed
 
-**Resolved 2026-06-15:** name = **Trasio FuelMatch** · headline proof = **"8,800 gal invoiced, no BOL → $39,600"** · alerting claim **kept** (build commitment) · bank/three-way claim **deferred** · pricing = **"Contact us"** for now (value-priced managed service).
+**Resolved 2026-06-15:** name = **Trasio FuelMatch** · canonical URL = **/fuelmatch** · headline proof = **"8,800 gal invoiced, no BOL → $39,600" (representative example)** · alerting claim **kept** (build commitment) · bank/three-way claim **deferred** · Price Variance **coded but hidden** (off public copy) · pricing = **"Contact us"** (value-priced managed service).
 
 Still open:
-- **Build approach for the static site** (`index.html` is a single hand-built HTML file ~53KB; per-product pages = new `shiftclose.html` / `fuel.html` or a templating step — decide before implementation).
+- **Build approach for the static site** (`index.html` is a single hand-built HTML file ~53KB; per-product pages = new `shiftclose.html` / `fuelmatch.html` or a templating step — decide before implementation).
+
+---
+
+## 7. SEO / social metadata — `/fuelmatch` (ready)
+
+From the designer, with "price errors" / contract-price removed (Price Variance is hidden — re-add when it ships):
+
+- **Page title (~64 chars):** `Trasio FuelMatch — Fuel Invoice Reconciliation for Convenience Stores`
+- **Meta description (~125 chars):** `Trasio FuelMatch checks BOLs against vendor invoices and catches phantom deliveries and overbilling. Keep every dollar you're owed.`
+- **H1:** `Know your fuel bill is right.` (matches the hero; differs from the title to avoid duplicate-signal)
+- **Open Graph:** `og:title` = `Trasio FuelMatch — Stop Overpaying for Fuel` · `og:description` = `Trasio catches phantom deliveries and overbilling on every fuel load — and works the dispute with the vendor so you don't have to.` · `og:image` = FuelMatch dashboard screenshot / branded card · `og:url` = `https://www.trasio.app/fuelmatch` · `og:type` = `website`
+
+Paste-ready `<head>` block:
+
+```html
+<title>Trasio FuelMatch — Fuel Invoice Reconciliation for Convenience Stores</title>
+<meta name="description" content="Trasio FuelMatch checks BOLs against vendor invoices and catches phantom deliveries and overbilling. Keep every dollar you're owed." />
+<meta property="og:title" content="Trasio FuelMatch — Stop Overpaying for Fuel" />
+<meta property="og:description" content="Trasio catches phantom deliveries and overbilling on every fuel load — and works the dispute with the vendor so you don't have to." />
+<meta property="og:url" content="https://www.trasio.app/fuelmatch" />
+<meta property="og:type" content="website" />
+```
+
+*Diff vs. the designer's draft: dropped "and price errors" (meta + OG) and "contract rack price" (home Card 2) to keep public copy consistent with Price Variance being coded-but-hidden. Also add a `<link rel="canonical" href="https://www.trasio.app/fuelmatch" />` and reuse the existing `og:image` dimensions from `index.html`.*
 
 ---
 
