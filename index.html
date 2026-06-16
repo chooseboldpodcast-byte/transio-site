@@ -1256,6 +1256,8 @@
       .product-cta:hover { gap: 10px; }
       .product-note { text-align: center; color: var(--color-text-muted); margin-top: 26px; font-size: 15px; }
       @media (max-width: 720px) { .product-grid { grid-template-columns: 1fr; } }
+      .pricing-amount-text { font-size: 2.25rem; font-weight: 700; line-height: 1; letter-spacing: -0.02em; color: var(--color-text); margin: 4px 0; }
+      .pricing-card .btn { margin-top: 4px; }
     </style>
   </head>
   <body>
@@ -1508,16 +1510,16 @@
         -->
 
 
-        <section class="section" id="pricing" aria-labelledby="pricing-heading">
+                <section class="section" id="pricing" aria-labelledby="pricing-heading">
           <div class="section-inner">
             <header class="section-heading">
               <p class="eyebrow">Pricing</p>
-              <h2 id="pricing-heading">Lock in Founding Store pricing.</h2>
+              <h2 id="pricing-heading">Pricing for both products.</h2>
             </header>
 
             <div class="pricing-row">
-              <article class="pricing-card" aria-label="Trasio ShiftClose Founding Stores pricing">
-                <p class="pricing-card-eyebrow">Founding Stores</p>
+              <article class="pricing-card" aria-label="Trasio ShiftClose pricing">
+                <p class="pricing-card-eyebrow">Trasio ShiftClose &middot; Founding Stores</p>
                 <p class="pricing-scarcity">Limited to the first 50 operators</p>
                 <p class="pricing-amount">
                   <span class="currency">$</span>
@@ -1528,69 +1530,87 @@
                 <p class="pricing-anchor">Standard pricing: $149/month</p>
                 <ul class="pricing-features">
                   <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"/>
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
                     Unlimited shift verifications
                   </li>
                   <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"/>
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
                     Timestamped audit trail
                   </li>
                   <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"/>
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
                     Works on any tablet
                   </li>
                   <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"/>
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
                     White-glove setup + email support
                   </li>
                   <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"/>
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
                     Direct line to the founder
                   </li>
                 </ul>
+                <a class="btn" href="#signup">Claim your spot</a>
               </article>
 
-              <div class="signup-shell" id="signup">
-                <div class="signup-form" id="signupForm">
-                  <div class="form-error" id="formError">Something went wrong. Please try again.</div>
-                  <form id="waitlistForm">
-                    <input type="hidden" name="access_key" value="86b3c2a7-78bc-481a-a708-0fdd7d6de730">
-                    <input type="hidden" name="subject" value="New Trasio Waitlist Signup">
-                    <input type="hidden" name="from_name" value="Trasio Waitlist">
+              <article class="pricing-card" aria-label="Trasio FuelMatch pricing">
+                <p class="pricing-card-eyebrow">Trasio FuelMatch &middot; Managed service</p>
+                <p class="pricing-scarcity">Software + a team that works your disputes</p>
+                <p class="pricing-amount-text">Let&rsquo;s talk</p>
+                <p class="pricing-per-store">Value-priced &mdash; a fraction of what we recover</p>
+                <p class="pricing-anchor">Add-on for Trasio stores &middot; standalone for multi-site operators</p>
+                <ul class="pricing-features">
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    BOL scanning + invoice matching
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    We work the vendor disputes for you
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    Discrepancy alerts to your phone
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    Pays for itself on one caught load
+                  </li>
+                </ul>
+                <a class="btn" href="#signup">Talk to us about FuelMatch</a>
+              </article>
+            </div>
 
-                    <div class="form-group">
-                      <label for="email">Email address</label>
-                      <input type="email" id="email" name="email" placeholder="you@yourstore.com" required>
-                    </div>
+            <div class="signup-shell" id="signup">
+              <div class="signup-form" id="signupForm">
+                <div class="form-error" id="formError">Something went wrong. Please try again.</div>
+                <form id="waitlistForm">
+                  <input type="hidden" name="access_key" value="86b3c2a7-78bc-481a-a708-0fdd7d6de730">
+                  <input type="hidden" name="subject" value="New Trasio Waitlist Signup">
+                  <input type="hidden" name="from_name" value="Trasio Waitlist">
 
-                    <div class="form-group">
-                      <label for="locations">How many store locations?</label>
-                      <select id="locations" name="locations">
-                        <option value="1">1 location</option>
-                        <option value="2-5">2-5 locations</option>
-                        <option value="6-10">6-10 locations</option>
-                        <option value="10+">10+ locations</option>
-                      </select>
-                    </div>
+                  <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email" placeholder="you@yourstore.com" required>
+                  </div>
 
-                    <button type="submit" class="submit-btn" id="submitBtn">Claim your spot</button>
-                    <p class="form-note">No spam.</p>
-                  </form>
-                </div>
-                <div class="form-success" id="formSuccess">
-                  <h4>Thanks for claiming your spot.</h4>
-                  <p>Manoj will email you shortly to schedule your store's setup.</p>
-                </div>
+                  <div class="form-group">
+                    <label for="locations">How many store locations?</label>
+                    <select id="locations" name="locations">
+                      <option value="1">1 location</option>
+                      <option value="2-5">2-5 locations</option>
+                      <option value="6-10">6-10 locations</option>
+                      <option value="10+">10+ locations</option>
+                    </select>
+                  </div>
+
+                  <button type="submit" class="submit-btn" id="submitBtn">Claim your spot</button>
+                  <p class="form-note">No spam.</p>
+                </form>
+              </div>
+              <div class="form-success" id="formSuccess">
+                <h4>Thanks for claiming your spot.</h4>
+                <p>Manoj will email you shortly to schedule your store&rsquo;s setup.</p>
               </div>
             </div>
           </div>
