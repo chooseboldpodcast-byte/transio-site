@@ -1257,7 +1257,9 @@
       .product-note { text-align: center; color: var(--color-text-muted); margin-top: 26px; font-size: 15px; }
       @media (max-width: 720px) { .product-grid { grid-template-columns: 1fr; } }
       .pricing-amount-text { font-size: 2.25rem; font-weight: 700; line-height: 1; letter-spacing: -0.02em; color: var(--color-text); margin: 4px 0; }
-      .pricing-card .btn { margin-top: 4px; }
+      .pricing-row { align-items: stretch; }
+      .pricing-card { display: flex; flex-direction: column; }
+      .pricing-card .btn { margin-top: auto; align-self: flex-start; }
     </style>
   </head>
   <body>
