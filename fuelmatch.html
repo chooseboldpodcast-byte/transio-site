@@ -1250,6 +1250,11 @@
       .product-cta:hover { gap: 10px; }
       .product-note { text-align: center; color: var(--color-text-muted); margin-top: 26px; font-size: 15px; }
       @media (max-width: 720px) { .product-grid { grid-template-columns: 1fr; } }
+      .feature-list { list-style: none; margin: 18px 0 0; padding: 0; display: flex; flex-direction: column; gap: 11px; }
+      .feature-list li { position: relative; padding-left: 26px; font-size: 15px; line-height: 1.5; color: var(--color-text-muted); }
+      .feature-list li::before { content: "\2713"; position: absolute; left: 0; top: 0; color: var(--color-primary); font-weight: 700; }
+      .fm-shot { display: block; width: 100%; max-width: 940px; margin: 32px auto 0; border: 1px solid var(--color-border); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); }
+      .fm-shot-caption { text-align: center; color: var(--color-text-muted); font-size: 13px; margin-top: 14px; }
     </style>
   </head>
   <body>
@@ -1280,13 +1285,13 @@
       </header>
 
       <main>
-        <!-- HERO -->
+        <!-- 1. HERO -->
         <section class="hero" aria-labelledby="fm-hero-heading">
           <div class="hero-grid">
             <div class="hero-copy">
-              <p class="hero-eyebrow">Trasio FuelMatch · Fuel reconciliation</p>
+              <p class="hero-eyebrow">Trasio FuelMatch &middot; Fuel reconciliation</p>
               <h1 id="fm-hero-heading">Know your fuel bill is <span>right</span>.</h1>
-              <p class="hero-translator">Scan the BOL in the store. Trasio checks it against your vendor invoice — and if you've been billed for fuel you never got, we catch it and work the dispute for you.</p>
+              <p class="hero-translator">Scan the BOL in the store. Trasio checks it against your vendor invoice &mdash; and if you&rsquo;ve been billed for fuel you never got, we catch it and work the dispute for you.</p>
               <p>Runs on the same tablet your team already uses for Trasio. No new hardware.</p>
               <div class="hero-actions">
                 <a class="btn" href="/#signup">Talk to us about FuelMatch</a>
@@ -1302,38 +1307,64 @@
           </div>
         </section>
 
-        <!-- PROBLEM -->
+        <!-- 2. PROBLEM -->
         <section id="why" class="section" aria-labelledby="fm-why-heading">
           <div class="section-inner">
             <header class="section-heading">
               <p class="eyebrow">Fuel invoices are too easy to get wrong.</p>
               <h2 id="fm-why-heading">Every load passes through four hands. Nobody checks the math.</h2>
-              <p>The truck, the paper BOL left at the store, the vendor's invoice, and the bank draft. Matching every delivery to every invoice by hand never happens — and the auto-draft can pay before anyone looks. One missed error quietly becomes thousands of dollars gone.</p>
-              <div class="operator-stat" aria-label="Example exposure">
-                <span class="operator-stat-number">$39,600</span>
-                <span class="operator-stat-label">Example: 8,800 gallons invoiced with no BOL on file — a charge for fuel that never showed up.</span>
-              </div>
+              <p>The truck, the paper BOL left at the store, the vendor&rsquo;s invoice, and the bank draft. Matching every delivery to every invoice by hand never happens &mdash; and the auto-draft can pay before anyone looks. One missed error quietly becomes thousands of dollars gone.</p>
             </header>
           </div>
         </section>
 
-        <!-- HOW IT WORKS: SOFTWARE + SERVICE -->
+        <!-- 3. WHAT FUELMATCH DOES - SOFTWARE + SERVICE (3 beats) -->
         <section id="how" class="section section--split" aria-labelledby="fm-how-heading">
           <div class="section-inner">
             <header class="section-heading">
               <p class="eyebrow">Software that watches. Service that works.</p>
               <h2 id="fm-how-heading">What Trasio FuelMatch does for you.</h2>
-              <p>FuelMatch checks every fuel delivery — and when something is wrong, our team works the problem with your vendor so you don't have to.</p>
+              <p>FuelMatch checks every fuel delivery &mdash; and when something is wrong, our team works the problem with your vendor so you don&rsquo;t have to.</p>
             </header>
             <div class="outcomes-grid outcomes-grid--inline" aria-label="How FuelMatch works">
-              <article class="outcome-card"><div class="outcome-content"><p class="outcome-eyebrow">Step 1</p><h3>Your store scans the BOL</h3><p>Staff snaps a photo of the Bill of Lading in the Trasio app at delivery. FuelMatch reads the BOL number, date, supplier, and gallons by grade.</p></div></article>
-              <article class="outcome-card"><div class="outcome-content"><p class="outcome-eyebrow">Step 2</p><h3>Trasio checks the invoice</h3><p>We compare the vendor invoice — gallons and totals — against the BOL. If everything matches, the delivery quietly moves to reconciled.</p></div></article>
-              <article class="outcome-card"><div class="outcome-content"><p class="outcome-eyebrow">Step 3</p><h3>We work the problem — not you</h3><p>When something doesn't match, FuelMatch opens a case and our team takes it to the vendor. You see which loads are at risk, how much is on the line, and where each case stands.</p></div></article>
+              <article class="outcome-card">
+                <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+                <div class="outcome-content"><p class="outcome-eyebrow">Step 1</p><h3>Your store scans the BOL</h3><p>Staff snaps a photo of the Bill of Lading in the Trasio app at delivery. FuelMatch reads the BOL number, date, supplier, and gallons by grade.</p></div>
+              </article>
+              <article class="outcome-card">
+                <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m9 15 2 2 4-4"/></svg>
+                <div class="outcome-content"><p class="outcome-eyebrow">Step 2</p><h3>Trasio checks the invoice</h3><p>We compare the vendor invoice &mdash; gallons and totals &mdash; against the BOL. If everything matches, the delivery quietly moves to reconciled.</p></div>
+              </article>
+              <article class="outcome-card">
+                <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <div class="outcome-content"><p class="outcome-eyebrow">Step 3</p><h3>We work the problem &mdash; not you</h3><p>When something doesn&rsquo;t match, FuelMatch opens a case and our team takes it to the vendor. You see which loads are at risk, how much is on the line, and where each case stands.</p></div>
+              </article>
             </div>
           </div>
         </section>
 
-        <!-- THE CHARGES -->
+        <!-- 4. THE PROOF -->
+        <section id="proof" class="section section--split" aria-labelledby="fm-proof-heading">
+          <div class="section-inner">
+            <header class="section-heading">
+              <p class="eyebrow">The proof</p>
+              <h2 id="fm-proof-heading">What FuelMatch catches, in real numbers.</h2>
+              <p>These aren&rsquo;t hypotheticals &mdash; they&rsquo;re the kind of errors sitting in fuel invoices right now.</p>
+            </header>
+            <div class="outcomes-grid outcomes-grid--inline" aria-label="Example findings">
+              <article class="outcome-card">
+                <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+                <div class="outcome-content"><p class="outcome-eyebrow">Phantom load &middot; example</p><h3>$39,600</h3><p>8,800 gallons of 87 invoiced with no BOL on file &mdash; a charge for fuel that never showed up.</p></div>
+              </article>
+              <article class="outcome-card">
+                <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg>
+                <div class="outcome-content"><p class="outcome-eyebrow">Overbilled volume &middot; example</p><h3>+142 gal</h3><p>The vendor billed 142 more gallons than the BOL shows the truck dropped. Every load, it adds up.</p></div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5. THE CHARGES -->
         <section class="section" aria-labelledby="fm-charges-heading">
           <div class="section-inner">
             <header class="section-heading">
@@ -1341,13 +1372,53 @@
               <h2 id="fm-charges-heading">The charges FuelMatch catches before you pay.</h2>
             </header>
             <div class="outcomes-grid outcomes-grid--inline" aria-label="Charges FuelMatch catches">
-              <article class="outcome-card"><div class="outcome-content"><p class="outcome-eyebrow">Phantom delivery</p><h3>Billed for fuel that never came</h3><p>You're invoiced for a load with no BOL on file. <strong>Example:</strong> 8,800 gallons of 87 at $4.50/gal = $39,600 you should not pay.</p></div></article>
-              <article class="outcome-card"><div class="outcome-content"><p class="outcome-eyebrow">Volume overbilling</p><h3>Invoiced for more than was dropped</h3><p>The BOL shows fewer gallons than the invoice. <strong>Example:</strong> BOL says 8,000 gallons, invoice says 8,800 — 800 extra gallons at $4.50/gal = $3,600.</p></div></article>
+              <article class="outcome-card">
+                <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+                <div class="outcome-content"><p class="outcome-eyebrow">Phantom delivery</p><h3>Billed for fuel that never came</h3><p>You&rsquo;re invoiced for a load with no BOL on file. <strong>Example:</strong> 8,800 gallons of 87 at $4.50/gal = $39,600 you should not pay.</p></div>
+              </article>
+              <article class="outcome-card">
+                <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg>
+                <div class="outcome-content"><p class="outcome-eyebrow">Volume overbilling</p><h3>Invoiced for more than was dropped</h3><p>The BOL shows fewer gallons than the invoice. <strong>Example:</strong> BOL says 8,000 gallons, invoice says 8,800 &mdash; 800 extra gallons at $4.50/gal = $3,600.</p></div>
+              </article>
             </div>
           </div>
         </section>
 
-        <!-- WHAT CHANGES -->
+        <!-- 6. SOFTWARE + SERVICE (two columns) -->
+        <section class="section" aria-labelledby="fm-ss-heading">
+          <div class="section-inner">
+            <header class="section-heading">
+              <p class="eyebrow">How it&rsquo;s delivered</p>
+              <h2 id="fm-ss-heading">Software that watches. Service that works.</h2>
+              <p>You get the benefit of automation without building a back-office reconciliation team.</p>
+            </header>
+            <div class="product-grid">
+              <article class="product-card">
+                <p class="outcome-eyebrow">Trasio software</p>
+                <h3>Watches every load</h3>
+                <ul class="feature-list">
+                  <li>BOL scanner on the tablets you already own</li>
+                  <li>Automatic reading of BOL number, gallons, and grades</li>
+                  <li>Matches each BOL against the vendor invoice</li>
+                  <li>Reconciliation dashboard: reconciled, pending, and needs-attention loads</li>
+                  <li>SMS and in-app alerts when a delivery looks wrong</li>
+                </ul>
+              </article>
+              <article class="product-card">
+                <p class="outcome-eyebrow">Trasio service</p>
+                <h3>Works the problem</h3>
+                <ul class="feature-list">
+                  <li>Human review of exceptions and edge cases</li>
+                  <li>We run the calls and email threads with your vendor</li>
+                  <li>We verify incorrect charges are reversed or never collected</li>
+                  <li>Plain-language updates on what happened and what changed</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- 7. WHAT CHANGES -->
         <section class="section section--split" aria-labelledby="fm-changes-heading">
           <div class="section-inner">
             <header class="section-heading">
@@ -1355,31 +1426,77 @@
               <h2 id="fm-changes-heading">What changes when FuelMatch is on.</h2>
             </header>
             <div class="outcomes-grid outcomes-grid--inline">
-              <article class="outcome-card"><div class="outcome-content"><p class="outcome-eyebrow">Fewer surprises</p><h3>See risk before it's permanent</h3><p>Risky deliveries and the dollars at stake surface as clear alerts — to your phone and in the app — before the money is gone.</p></div></article>
-              <article class="outcome-card"><div class="outcome-content"><p class="outcome-eyebrow">Less hassle</p><h3>Your team scans; we chase</h3><p>Staff just photograph the BOL. Trasio does the checking, and our team runs the back-and-forth with the vendor.</p></div></article>
-              <article class="outcome-card"><div class="outcome-content"><p class="outcome-eyebrow">Protected margin</p><h3>One catch pays for it</h3><p>Catching a single phantom or overbilled load can more than cover FuelMatch for the year.</p></div></article>
+              <article class="outcome-card">
+                <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+                <div class="outcome-content"><p class="outcome-eyebrow">Fewer surprises</p><h3>See risk before it&rsquo;s permanent</h3><p>Risky deliveries and the dollars at stake surface as clear alerts &mdash; to your phone and in the app &mdash; before the money is gone.</p></div>
+              </article>
+              <article class="outcome-card">
+                <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <div class="outcome-content"><p class="outcome-eyebrow">Less hassle</p><h3>Your team scans; we chase</h3><p>Staff just photograph the BOL. Trasio does the checking, and our team runs the back-and-forth with the vendor.</p></div>
+              </article>
+              <article class="outcome-card">
+                <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+                <div class="outcome-content"><p class="outcome-eyebrow">Protected margin</p><h3>One catch pays for it</h3><p>Catching a single phantom or overbilled load can more than cover FuelMatch for the year.</p></div>
+              </article>
             </div>
           </div>
         </section>
 
-        <!-- PLATFORM FIT -->
+        <!-- 8. INSIDE FUELMATCH -->
+        <section class="section" aria-labelledby="fm-inside-heading">
+          <div class="section-inner">
+            <header class="section-heading">
+              <p class="eyebrow">Inside FuelMatch</p>
+              <h2 id="fm-inside-heading">Every delivery, reconciled or flagged &mdash; at a glance.</h2>
+              <p>The Fuel Delivery Reconciliation dashboard ranks what needs attention first, with the dollars at stake on every flagged load.</p>
+            </header>
+            <img class="fm-shot" src="dashboard-preview.PNG" alt="Trasio FuelMatch reconciliation dashboard showing flagged deliveries and dollars at risk" />
+            <p class="fm-shot-caption">The reconciliation dashboard. (Fuel Purchases report and SMS-alert views coming as the screenshots are finalized.)</p>
+          </div>
+        </section>
+
+        <!-- 9. PLATFORM FIT -->
         <section class="section" aria-labelledby="fm-platform-heading">
           <div class="section-inner">
             <header class="section-heading">
               <p class="eyebrow">One platform</p>
               <h2 id="fm-platform-heading">FuelMatch and ShiftClose, on the same tablets.</h2>
-              <p>FuelMatch runs alongside Trasio ShiftClose on the same tablets and the same login. ShiftClose protects your cash and inventory at handoff. FuelMatch protects your fuel spend. Two of the biggest sources of loss in a convenience store — covered.</p>
+              <p>FuelMatch runs alongside Trasio ShiftClose on the same tablets and the same login. ShiftClose protects your cash and inventory at handoff. FuelMatch protects your fuel spend. Two of the biggest sources of loss in a convenience store &mdash; covered.</p>
             </header>
           </div>
         </section>
 
-        <!-- CTA -->
+        <!-- 10. OBJECTIONS -->
+        <section class="section section--split" aria-labelledby="fm-faq-heading">
+          <div class="section-inner">
+            <header class="section-heading">
+              <p class="eyebrow">Straight answers</p>
+              <h2 id="fm-faq-heading">What operators ask first.</h2>
+            </header>
+            <div class="outcomes-grid outcomes-grid--inline">
+              <article class="outcome-card">
+                <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg>
+                <div class="outcome-content"><p class="outcome-eyebrow">New hardware?</p><h3>No.</h3><p>FuelMatch rides on the same tablet your team already uses for Trasio. Nothing to buy or install.</p></div>
+              </article>
+              <article class="outcome-card">
+                <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg>
+                <div class="outcome-content"><p class="outcome-eyebrow">Works with my supplier?</p><h3>Yes.</h3><p>You scan the paper BOL and forward (or key in) the invoice. No special access to your supplier&rsquo;s systems required.</p></div>
+              </article>
+              <article class="outcome-card">
+                <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg>
+                <div class="outcome-content"><p class="outcome-eyebrow">How long to set up?</p><h3>Minutes.</h3><p>It&rsquo;s a tab in the Trasio app you already run. Start scanning BOLs the same day.</p></div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- 11. CTA -->
         <section id="cta" class="section" aria-labelledby="fm-cta-heading">
           <div class="section-inner">
             <header class="section-heading">
               <p class="eyebrow">Next step</p>
               <h2 id="fm-cta-heading">See what you overpaid last month.</h2>
-              <p>Send us last month's deliveries and invoices — we'll show you what you were overbilled. FuelMatch is available as an add-on for Trasio stores and standalone for multi-site operators.</p>
+              <p>Send us last month&rsquo;s deliveries and invoices &mdash; we&rsquo;ll show you what you were overbilled. FuelMatch is available as an add-on for Trasio stores and standalone for multi-site operators.</p>
             </header>
             <div class="hero-actions" style="justify-content:center;">
               <a class="btn" href="/#signup">Schedule a FuelMatch walkthrough</a>
