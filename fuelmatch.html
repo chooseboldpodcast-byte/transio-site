@@ -1255,6 +1255,10 @@
       .feature-list li::before { content: "\2713"; position: absolute; left: 0; top: 0; color: var(--color-primary); font-weight: 700; }
       .fm-shot { display: block; width: 100%; max-width: 940px; margin: 32px auto 0; border: 1px solid var(--color-border); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); }
       .fm-shot-caption { text-align: center; color: var(--color-text-muted); font-size: 13px; margin-top: 14px; }
+      .tour-placeholder { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 16px; text-align: center; }
+      .tour-placeholder svg { width: 34px; height: 34px; color: var(--color-primary); opacity: 0.85; }
+      .tour-placeholder-label { font-size: 15px; font-weight: 600; color: rgba(255,255,255,0.85); }
+      .tour-placeholder-note { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.4); }
     </style>
   </head>
   <body>
@@ -1450,8 +1454,39 @@
               <h2 id="fm-inside-heading">Every delivery, reconciled or flagged &mdash; at a glance.</h2>
               <p>The Fuel Delivery Reconciliation dashboard ranks what needs attention first, with the dollars at stake on every flagged load.</p>
             </header>
-            <img class="fm-shot" src="dashboard-preview.PNG" alt="Trasio FuelMatch reconciliation dashboard showing flagged deliveries and dollars at risk" />
-            <p class="fm-shot-caption">The reconciliation dashboard. (Fuel Purchases report and SMS-alert views coming as the screenshots are finalized.)</p>
+            <div class="product-tour-grid" aria-label="Trasio FuelMatch product tour">
+              <article class="product-tour-card">
+                <div class="product-tour-screenshot">
+                  <img src="dashboard-preview.PNG" alt="Trasio FuelMatch reconciliation dashboard showing flagged deliveries and dollars at risk">
+                </div>
+                <p class="product-tour-eyebrow">Needs attention first</p>
+                <h3>Every delivery ranked by the dollars at stake &mdash; reconciled, pending, or flagged.</h3>
+              </article>
+
+              <article class="product-tour-card">
+                <div class="product-tour-screenshot">
+                  <div class="tour-placeholder">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/></svg>
+                    <span class="tour-placeholder-label">Fuel Purchases report</span>
+                    <span class="tour-placeholder-note">Preview coming soon</span>
+                  </div>
+                </div>
+                <p class="product-tour-eyebrow">Monthly view</p>
+                <h3>Gallons by grade and vendor pricing, month over month.</h3>
+              </article>
+
+              <article class="product-tour-card">
+                <div class="product-tour-screenshot">
+                  <div class="tour-placeholder">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    <span class="tour-placeholder-label">Discrepancy alert</span>
+                    <span class="tour-placeholder-note">Preview coming soon</span>
+                  </div>
+                </div>
+                <p class="product-tour-eyebrow">To your phone</p>
+                <h3>An SMS the moment a delivery doesn&rsquo;t match &mdash; before the draft clears.</h3>
+              </article>
+            </div>
           </div>
         </section>
 
