@@ -777,6 +777,89 @@
         font-weight: 600;
       }
 
+      /* Slim bridge band */
+      .section--bridge {
+        padding-top: 28px;
+        padding-bottom: 28px;
+      }
+
+      .section--bridge .section-heading {
+        max-width: 760px;
+        margin-bottom: 0;
+      }
+
+      .section--bridge .product-cta {
+        margin-top: 16px;
+      }
+
+      /* FAQ — stacked Q&A rows */
+      .faq-list {
+        margin-top: 24px;
+        border-top: 1px solid var(--color-border);
+      }
+
+      .faq-row {
+        padding: 22px 0;
+        border-bottom: 1px solid var(--color-border);
+        display: grid;
+        grid-template-columns: 1fr 1.7fr;
+        gap: 32px;
+        align-items: start;
+      }
+
+      .faq-q {
+        margin: 0;
+        font-size: 17px;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        color: var(--color-text);
+      }
+
+      .faq-a {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.6;
+        color: var(--color-text-muted);
+      }
+
+      .faq-a strong {
+        color: var(--color-text);
+        font-weight: 600;
+      }
+
+      @media (max-width: 720px) {
+        .faq-row {
+          grid-template-columns: 1fr;
+          gap: 8px;
+        }
+      }
+
+      /* Pricing beat + centered CTA close */
+      .section--cta .section-heading {
+        max-width: 680px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+
+      .section--cta .section-heading .eyebrow {
+        justify-content: center;
+      }
+
+      .cta-pricing {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto 22px;
+        font-size: 14px;
+        line-height: 1.5;
+        color: var(--color-text-muted);
+      }
+
+      .cta-pricing strong {
+        color: var(--color-text);
+        font-weight: 600;
+      }
+
       /* Image-led dashboard section */
       .inside-grid {
         display: grid;
@@ -1677,49 +1760,51 @@
           </div>
         </section>
 
-        <!-- 9. PLATFORM FIT -->
-        <section class="section" aria-labelledby="fm-platform-heading">
+        <!-- 9. PLATFORM FIT (slim bridge band) -->
+        <section class="section section--bridge" aria-labelledby="fm-platform-heading">
           <div class="section-inner">
             <header class="section-heading">
               <p class="eyebrow">One platform</p>
               <h2 id="fm-platform-heading">FuelMatch and ShiftCheck, on the same tablets.</h2>
               <p>FuelMatch runs alongside Trasio ShiftCheck on the same tablets and the same login. ShiftCheck protects your cash and inventory at handoff. FuelMatch protects your fuel spend. Two of the biggest sources of loss in a convenience store &mdash; covered.</p>
+              <a class="product-cta" href="/shiftcheck">See Trasio ShiftCheck &rarr;</a>
             </header>
           </div>
         </section>
 
-        <!-- 10. OBJECTIONS -->
-        <section class="section section--split" aria-labelledby="fm-faq-heading">
+        <!-- 10. FAQ (stacked Q&A rows) -->
+        <section class="section" aria-labelledby="fm-faq-heading">
           <div class="section-inner">
             <header class="section-heading">
               <p class="eyebrow">Straight answers</p>
               <h2 id="fm-faq-heading">What operators ask first.</h2>
             </header>
-            <div class="outcomes-grid outcomes-grid--inline">
-              <article class="outcome-card">
-                <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg>
-                <div class="outcome-content"><p class="outcome-eyebrow">New hardware?</p><h3>No.</h3><p>FuelMatch rides on the same tablet your team already uses for Trasio. Nothing to buy or install.</p></div>
-              </article>
-              <article class="outcome-card">
-                <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg>
-                <div class="outcome-content"><p class="outcome-eyebrow">Works with my supplier?</p><h3>Yes.</h3><p>You scan the paper BOL and forward (or key in) the invoice. No special access to your supplier&rsquo;s systems required.</p></div>
-              </article>
-              <article class="outcome-card">
-                <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg>
-                <div class="outcome-content"><p class="outcome-eyebrow">How long to set up?</p><h3>Minutes.</h3><p>It&rsquo;s a tab in the Trasio app you already run. Start scanning BOLs the same day.</p></div>
-              </article>
+            <div class="faq-list">
+              <div class="faq-row">
+                <p class="faq-q">Do I need new hardware?</p>
+                <p class="faq-a"><strong>No.</strong> FuelMatch rides on the same tablet your team already uses for Trasio. Nothing to buy or install.</p>
+              </div>
+              <div class="faq-row">
+                <p class="faq-q">Will it work with my supplier?</p>
+                <p class="faq-a"><strong>Yes.</strong> You scan the paper BOL and forward (or key in) the invoice. No special access to your supplier&rsquo;s systems required.</p>
+              </div>
+              <div class="faq-row">
+                <p class="faq-q">How long does setup take?</p>
+                <p class="faq-a"><strong>Minutes.</strong> It&rsquo;s a tab in the Trasio app you already run. Start scanning BOLs the same day.</p>
+              </div>
             </div>
           </div>
         </section>
 
-        <!-- 11. CTA -->
-        <section id="cta" class="section" aria-labelledby="fm-cta-heading">
+        <!-- 11. PRICING + CTA (centered close) -->
+        <section id="cta" class="section section--cta" aria-labelledby="fm-cta-heading">
           <div class="section-inner">
             <header class="section-heading">
               <p class="eyebrow">Next step</p>
               <h2 id="fm-cta-heading">See what you overpaid last month.</h2>
               <p>Send us last month&rsquo;s deliveries and invoices &mdash; we&rsquo;ll show you what you were overbilled. FuelMatch is available as an add-on for Trasio stores and standalone for multi-site operators.</p>
             </header>
+            <p class="cta-pricing"><strong>Pricing:</strong> a managed service, priced to your fuel volume &mdash; let&rsquo;s talk. One catch often covers the year.</p>
             <div class="hero-actions" style="justify-content:center;">
               <a class="btn" href="/#signup">Schedule a FuelMatch walkthrough</a>
               <a class="btn-secondary" href="/#signup">Talk to us about your fuel invoices</a>
