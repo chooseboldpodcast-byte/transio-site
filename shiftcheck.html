@@ -1332,6 +1332,9 @@
       .feature-list { list-style: none; margin: 18px 0 0; padding: 0; display: flex; flex-direction: column; gap: 11px; }
       .feature-list li { position: relative; padding-left: 26px; font-size: 15px; line-height: 1.5; color: var(--color-text-muted); }
       .feature-list li::before { content: "\2713"; position: absolute; left: 0; top: 0; color: var(--color-primary); font-weight: 700; }
+      .section--bridge { padding-top: 28px; padding-bottom: 28px; }
+      .section--bridge .section-heading { max-width: 760px; margin-bottom: 0; }
+      .section--bridge .product-cta { margin-top: 16px; }
       @media (max-width: 720px) { .product-grid { grid-template-columns: 1fr; } }
     </style>
   </head>
@@ -1603,6 +1606,18 @@
                 <p>A cleaner shift record makes it easier to spot recurring exceptions, narrow shrink to a shift interval, and coach the stores that need attention.</p>
               </article>
             </div>
+          </div>
+        </section>
+
+        <!-- ONE PLATFORM (slim bridge band) -->
+        <section class="section section--bridge" aria-labelledby="sc-platform-heading">
+          <div class="section-inner">
+            <header class="section-heading">
+              <p class="eyebrow">One platform</p>
+              <h2 id="sc-platform-heading">ShiftCheck and FuelMatch, on the same tablets.</h2>
+              <p>ShiftCheck runs alongside FuelMatch in the same Trasio app and under the same login. ShiftCheck protects inventory at handoff. FuelMatch protects fuel spend. Two major sources of loss in convenience retail &mdash; covered.</p>
+              <a class="product-cta" href="/fuelmatch">See Trasio FuelMatch &rarr;</a>
+            </header>
           </div>
         </section>
 
