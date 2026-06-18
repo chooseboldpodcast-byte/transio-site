@@ -835,6 +835,72 @@
         flex: 1;
       }
 
+      .flow-strip {
+        margin-top: 38px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 8px;
+        flex-wrap: nowrap;
+      }
+
+      .flow-node {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+        min-width: 92px;
+      }
+
+      .flow-node-icon {
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--color-primary-soft);
+        border: 1px solid rgba(46, 204, 113, 0.25);
+      }
+
+      .flow-node-icon svg {
+        width: 24px;
+        height: 24px;
+        color: var(--color-primary);
+      }
+
+      .flow-node-label {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--color-text);
+        letter-spacing: -0.01em;
+      }
+
+      .flow-node-sub {
+        font-size: 11px;
+        line-height: 1.3;
+        color: var(--color-text-muted);
+        max-width: 12ch;
+      }
+
+      .flow-arrow {
+        width: 20px;
+        height: 20px;
+        color: rgba(20, 20, 20, 0.26);
+        flex-shrink: 0;
+        margin-top: 17px;
+      }
+
+      @media (max-width: 640px) {
+        .flow-strip { gap: 2px; }
+        .flow-node { min-width: 0; flex: 1; gap: 8px; }
+        .flow-node-icon { width: 44px; height: 44px; }
+        .flow-node-icon svg { width: 20px; height: 20px; }
+        .flow-node-sub { display: none; }
+        .flow-arrow { width: 14px; margin-top: 12px; }
+      }
+
       .pricing-row {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -1295,8 +1361,8 @@
             <div class="hero-copy">
               <p class="hero-eyebrow">Trasio FuelMatch &middot; Fuel reconciliation</p>
               <h1 id="fm-hero-heading">Know your fuel bill is <span>right</span>.</h1>
-              <p class="hero-translator">Scan the BOL in the store. Trasio checks it against your vendor invoice &mdash; and if you&rsquo;ve been billed for fuel you never got, we catch it and work the dispute for you.</p>
-              <p>Runs on the same tablet your team already uses for Trasio. No new hardware.</p>
+              <p class="hero-translator">Scan the BOL at delivery. Trasio checks it against your vendor invoice and catches what you were wrongly billed.</p>
+              <p>We work the dispute for you &mdash; on the tablet your team already uses. No new hardware.</p>
               <div class="hero-actions">
                 <a class="btn" href="/#signup">Talk to us about FuelMatch</a>
                 <a class="btn-secondary" href="#how">See how it works</a>
@@ -1319,6 +1385,31 @@
               <h2 id="fm-why-heading">Every load passes through the truck, the BOL, the invoice, and the bank draft. Almost nobody checks every line before the money moves.</h2>
               <p>Matching every delivery to every invoice by hand rarely happens. The paper BOL gets left at the store, the invoice arrives later, and the draft can clear before anyone looks closely. One missed discrepancy quietly becomes thousands of dollars gone.</p>
             </header>
+            <div class="flow-strip" aria-label="Every load passes through four steps: truck, BOL, invoice, bank draft">
+              <div class="flow-node">
+                <span class="flow-node-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg></span>
+                <span class="flow-node-label">The truck</span>
+                <span class="flow-node-sub">Fuel is dropped</span>
+              </div>
+              <svg class="flow-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+              <div class="flow-node">
+                <span class="flow-node-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg></span>
+                <span class="flow-node-label">The BOL</span>
+                <span class="flow-node-sub">Paper record</span>
+              </div>
+              <svg class="flow-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+              <div class="flow-node">
+                <span class="flow-node-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></svg></span>
+                <span class="flow-node-label">The invoice</span>
+                <span class="flow-node-sub">Arrives later</span>
+              </div>
+              <svg class="flow-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+              <div class="flow-node">
+                <span class="flow-node-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg></span>
+                <span class="flow-node-label">The bank draft</span>
+                <span class="flow-node-sub">Money clears</span>
+              </div>
+            </div>
           </div>
         </section>
 
