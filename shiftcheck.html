@@ -1296,6 +1296,9 @@
       .product-cta { margin-top: 20px; align-self: flex-start; color: var(--color-primary); font-weight: 600; font-size: 15px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
       .product-cta:hover { gap: 10px; }
       .product-note { text-align: center; color: var(--color-text-muted); margin-top: 26px; font-size: 15px; }
+      .feature-list { list-style: none; margin: 18px 0 0; padding: 0; display: flex; flex-direction: column; gap: 11px; }
+      .feature-list li { position: relative; padding-left: 26px; font-size: 15px; line-height: 1.5; color: var(--color-text-muted); }
+      .feature-list li::before { content: "\2713"; position: absolute; left: 0; top: 0; color: var(--color-primary); font-weight: 700; }
       @media (max-width: 720px) { .product-grid { grid-template-columns: 1fr; } }
     </style>
   </head>
@@ -1531,6 +1534,37 @@
                 </div>
                 <p class="product-tour-eyebrow">Exception trail</p>
                 <h3>What changed, when it changed, and what the store saw at handoff.</h3>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- HOW IT'S DELIVERED (software + record) -->
+        <section class="section" aria-labelledby="sc-delivered-heading">
+          <div class="section-inner">
+            <header class="section-heading">
+              <p class="eyebrow">How it&rsquo;s delivered</p>
+              <h2 id="sc-delivered-heading">Software that sees the shelf. Records that hold up.</h2>
+              <p>You get a faster shift close process without adding new hardware or building a manual audit routine. Trasio AI uses the tablet camera to identify inventory in seconds, preserves the handoff record, and surfaces discrepancies before they get buried.</p>
+            </header>
+            <div class="product-grid">
+              <article class="product-card">
+                <p class="outcome-eyebrow">Trasio software</p>
+                <h3>Sees the shelf in seconds</h3>
+                <ul class="feature-list">
+                  <li>Uses the tablet camera to scan behind-the-counter inventory.</li>
+                  <li>Identifies and counts products without item-by-item barcode scans.</li>
+                  <li>Flags discrepancies before the shift moves on.</li>
+                </ul>
+              </article>
+              <article class="product-card">
+                <p class="outcome-eyebrow">Trasio record</p>
+                <h3>Preserves the record</h3>
+                <ul class="feature-list">
+                  <li>Stores a clear record of each shift handoff.</li>
+                  <li>Shows what changed and when responsibility moved.</li>
+                  <li>Gives managers a cleaner basis for follow-up and review.</li>
+                </ul>
               </article>
             </div>
           </div>
