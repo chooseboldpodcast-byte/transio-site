@@ -1341,6 +1341,9 @@
       .faq-a { margin: 0; font-size: 14px; line-height: 1.6; color: var(--color-text-muted); }
       .faq-a strong { color: var(--color-text); font-weight: 600; }
       @media (max-width: 720px) { .faq-row { grid-template-columns: 1fr; gap: 8px; } }
+      .section--cta .section-heading { max-width: 680px; margin-left: auto; margin-right: auto; text-align: center; }
+      .section--cta .section-heading .eyebrow { justify-content: center; }
+      .section--cta .section-heading p + p { margin-top: 14px; }
       @media (max-width: 720px) { .product-grid { grid-template-columns: 1fr; } }
     </style>
   </head>
@@ -1651,16 +1654,17 @@
           </div>
         </section>
 
-        <section id="cta" class="section" aria-labelledby="sc-cta-heading">
+        <section id="cta" class="section section--cta" aria-labelledby="sc-cta-heading">
           <div class="section-inner">
             <header class="section-heading">
               <p class="eyebrow">Next step</p>
-              <h2 id="sc-cta-heading">Close your next shift in 5 minutes.</h2>
-              <p>Lock in Founding Store pricing and get your first location live in hours &mdash; on the tablets you already own.</p>
+              <h2 id="sc-cta-heading">See how your store closes shifts today &mdash; and how much faster it could be.</h2>
+              <p>We&rsquo;ll walk through your current shift-close process, show where time gets lost, and map how ShiftCheck would work in your stores.</p>
+              <p>ShiftCheck is available as part of the Trasio platform for convenience retailers and multi-site operators.</p>
             </header>
             <div class="hero-actions" style="justify-content:center;">
-              <a class="btn" href="/#signup">Join Founding Stores</a>
-              <a class="btn-secondary" href="/fuelmatch">See Trasio FuelMatch</a>
+              <a class="btn" href="/#signup">Schedule a ShiftCheck walkthrough</a>
+              <a class="btn-secondary" href="/#signup">Talk to us about shift close</a>
             </div>
           </div>
         </section>
