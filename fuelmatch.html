@@ -690,6 +690,39 @@
         margin-bottom: 14px;
       }
 
+      /* Light benefit strip — deliberately lighter than bordered cards */
+      .outcomes-grid--strip {
+        gap: 30px;
+        margin-top: 30px;
+      }
+
+      .outcomes-grid--strip .outcome-card {
+        background: transparent;
+        border: none;
+        padding: 0;
+      }
+
+      .outcomes-grid--strip .card-icon {
+        width: 24px;
+        height: 24px;
+        margin-bottom: 12px;
+      }
+
+      .outcomes-grid--strip .outcome-eyebrow {
+        margin: 0 0 6px;
+      }
+
+      .outcomes-grid--strip .outcome-card h3 {
+        font-size: 16px;
+        letter-spacing: -0.02em;
+        margin: 0 0 6px;
+      }
+
+      .outcomes-grid--strip .outcome-card p:not(.outcome-eyebrow) {
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
       .product-tour-grid {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1516,14 +1549,14 @@
           </div>
         </section>
 
-        <!-- 7. WHAT CHANGES -->
-        <section class="section section--split" aria-labelledby="fm-changes-heading">
+        <!-- 7. WHAT CHANGES (light benefit strip) -->
+        <section class="section" aria-labelledby="fm-changes-heading">
           <div class="section-inner">
             <header class="section-heading">
               <p class="eyebrow">For owner-operators</p>
               <h2 id="fm-changes-heading">What changes when FuelMatch is on.</h2>
             </header>
-            <div class="outcomes-grid outcomes-grid--inline">
+            <div class="outcomes-grid outcomes-grid--strip">
               <article class="outcome-card">
                 <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
                 <div class="outcome-content"><p class="outcome-eyebrow">Fewer surprises</p><h3>See risk before it&rsquo;s permanent</h3><p>Risky deliveries and the dollars at stake surface as clear alerts &mdash; to your phone and in the app &mdash; before the money is gone.</p></div>
