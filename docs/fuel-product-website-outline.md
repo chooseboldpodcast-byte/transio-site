@@ -156,3 +156,53 @@ Paste-ready `<head>` block:
 ## Suggested first slice (ship fast)
 
 Nav dropdown + home two-product split + a single `/fuel` page built around the **free Fuel Audit** offer, with honest founding-store claims. Pricing and full content parity follow.
+
+---
+
+# /fuelmatch Page-Template Rebuild Spec (2026-06-17)
+
+**Why this section exists.** The `/fuelmatch` page shipped but reads as a *template problem*: ~8 sections all use the same centered-eyebrow → H2 → bordered-card-grid unit, so the page feels like one block repeated, with no rhythm or hierarchy. There is also a literal duplication — the tagline **"Software that watches. Service that works."** appears twice (eyebrow of the workflow section *and* H2 of the delivery section), and both sections teach the same software+service idea.
+
+**Thesis:** the page's problem is visual monotony plus a duplicated tagline; the cure is assigning a *distinct layout archetype to each section* so the eye gets cadence and each beat earns its slot in the buyer's arc (hook → pain → how → evidence → delivery → outcome → product → ecosystem → objections → close).
+
+**Success criteria:** on a fast scroll, every section looks visually different; **proof** and **dashboard** are the two clear visual peaks; no headline or tagline repeats anywhere on the page.
+**Kill criteria:** if two adjacent sections still read as the same card grid (esp. #5 vs #6), the rebuild failed — differentiate or merge.
+
+## The 10-section template
+
+| # | Section | Layout archetype | Notes |
+|---|---------|------------------|-------|
+| 1 | **Hero** | Split — copy left, one proof number/visual right | "Denser": pull one dollar example into the hero so value lands above the fold |
+| 2 | **Problem** | Prose + slim inline 4-node flow diagram (truck → BOL → invoice → bank) | The H2 already names the chain; make the chain the visual. First break from cards |
+| 3 | **3-step workflow** | Full-width 3-card row, numbered STEP 1/2/3 | Retitle eyebrow → "How it works." **Remove the duplicated "Software that watches…" tagline here** |
+| 4 | **Proof** | 3-card grid, heaviest visual weight (big $ numbers) | First visual peak — the money shot |
+| 5 | **Software vs service** | Two balanced side-by-side cards | **Sole home** of "Software that watches. Service that works." |
+| 6 | **Owner-operator outcomes** | Light 3-icon horizontal strip — NOT cards | Must be visually lighter than #5. Content = "what changes in your week" (time, cash, peace of mind), distinct from #5's "what you get / how delivered" |
+| 7 | **Dashboard** | Image-led split — large screenshot + 3 supporting callouts | Second visual peak. **Blocked** on 2 real shots; until then lead with the one real dashboard image and DROP the "Preview coming soon" placeholders |
+| 8 | **One platform** | Slim bridge band (one line + ShiftCheck link) | Deliberately minimal — a breath, not a section |
+| 9 | **FAQ** | Stacked Q&A rows / accordion | Convert today's "objections" cards to text rows |
+| 10 | **Pricing + CTA** | One-line pricing nod above a full-width centered close | Pricing beat: "Priced to your volume — let's talk" (managed service; agreed 2026-06-17). Single focused action |
+
+Resulting scroll rhythm: split → prose+diagram → 3 cards → heavy cards → 2 cards → light strip → image → thin band → rows → CTA.
+
+## Mapping from the current page (what moves where)
+
+Current order: 1 Hero · 2 Problem · 3 Software+Service 3-beats · 4 Proof · 5 Charges (HIDDEN) · 6 Software+Service two-column · 7 What changes · 8 Inside FuelMatch · 9 Platform fit · 10 Objections · 11 CTA.
+
+- Hero → **#1** (tighten/densify)
+- Problem → **#2** (add inline diagram)
+- §3 "What FuelMatch does for you" → **#3** (retitle eyebrow "How it works"; strip the duplicate tagline)
+- §4 Proof → **#4** (heavier weight)
+- §5 Charges → stays **hidden/deleted** (already done; proof carries the examples)
+- §6 two-column software/service → **#5** (keeps the tagline as its H2)
+- §7 What changes → **#6** (re-treat as a light strip, not cards)
+- §8 Inside FuelMatch → **#7** (image-led; resolve placeholders)
+- §9 Platform fit → **#8** (slim band)
+- §10 Objections → **#9** (stacked rows / accordion)
+- §11 CTA → **#10** (add pricing line above)
+
+## Open dependency
+- **2 real FuelMatch screenshots** (Fuel Purchases report + SMS alert) gate the full #7 treatment. Standing open item from the 2026-06-15 launch.
+
+## Build order
+Implement section by section, top to bottom, committing each. Deploy via the standard branch→FF-main flow. Restore tag `pre-fuelmatch-2026-06-15` remains valid.
