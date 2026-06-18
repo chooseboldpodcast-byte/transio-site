@@ -777,6 +777,71 @@
         font-weight: 600;
       }
 
+      /* Image-led dashboard section */
+      .inside-grid {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr;
+        gap: 48px;
+        align-items: center;
+        margin-top: 30px;
+      }
+
+      .inside-shot {
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        background: #161618;
+        border: 1px solid rgba(40, 37, 29, 0.08);
+        box-shadow: var(--shadow-soft);
+      }
+
+      .inside-shot img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .inside-callouts {
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+      }
+
+      .inside-callout {
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+      }
+
+      .inside-callout .card-icon {
+        margin-bottom: 0;
+        margin-top: 2px;
+        width: 26px;
+        height: 26px;
+      }
+
+      .inside-callout-eyebrow {
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: var(--color-eyebrow);
+        margin: 0 0 5px;
+      }
+
+      .inside-callout p:not(.inside-callout-eyebrow) {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.5;
+        color: var(--color-text-muted);
+      }
+
+      @media (max-width: 900px) {
+        .inside-grid {
+          grid-template-columns: 1fr;
+          gap: 28px;
+        }
+      }
+
       @media (max-width: 900px) {
         .product-tour-grid {
           grid-template-columns: 1fr;
@@ -1581,38 +1646,33 @@
               <h2 id="fm-inside-heading">Every delivery, reconciled or flagged &mdash; at a glance.</h2>
               <p>The FuelMatch dashboard ranks what needs attention first, with the dollars at stake visible on every flagged delivery.</p>
             </header>
-            <div class="product-tour-grid" aria-label="Trasio FuelMatch product tour">
-              <article class="product-tour-card">
-                <div class="product-tour-screenshot">
-                  <img src="dashboard-preview.PNG" alt="Trasio FuelMatch reconciliation dashboard showing flagged deliveries and dollars at risk">
-                </div>
-                <p class="product-tour-eyebrow">Needs attention first</p>
-                <h3>Every delivery ranked by the dollars at stake &mdash; reconciled, pending, or flagged.</h3>
-              </article>
-
-              <article class="product-tour-card">
-                <div class="product-tour-screenshot">
-                  <div class="tour-placeholder">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/></svg>
-                    <span class="tour-placeholder-label">Fuel Purchases report</span>
-                    <span class="tour-placeholder-note">Preview coming soon</span>
+            <div class="inside-grid">
+              <div class="inside-shot">
+                <img src="dashboard-preview.PNG" alt="Trasio FuelMatch reconciliation dashboard showing flagged deliveries and dollars at risk">
+              </div>
+              <div class="inside-callouts">
+                <div class="inside-callout">
+                  <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 12h11"/><path d="M10 18h11"/><path d="M10 6h11"/><path d="M4 10h2"/><path d="M4 6h1v4"/><path d="M6 18H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+                  <div>
+                    <p class="inside-callout-eyebrow">Needs attention first</p>
+                    <p>Every delivery ranked by the dollars at stake &mdash; reconciled, pending, or flagged.</p>
                   </div>
                 </div>
-                <p class="product-tour-eyebrow">Monthly view</p>
-                <h3>Gallons by grade and vendor pricing, month over month.</h3>
-              </article>
-
-              <article class="product-tour-card">
-                <div class="product-tour-screenshot">
-                  <div class="tour-placeholder">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                    <span class="tour-placeholder-label">Discrepancy alert</span>
-                    <span class="tour-placeholder-note">Preview coming soon</span>
+                <div class="inside-callout">
+                  <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/></svg>
+                  <div>
+                    <p class="inside-callout-eyebrow">Monthly view</p>
+                    <p>Gallons by grade and vendor pricing, month over month.</p>
                   </div>
                 </div>
-                <p class="product-tour-eyebrow">To your phone</p>
-                <h3>An SMS the moment a delivery doesn&rsquo;t match &mdash; before the draft clears.</h3>
-              </article>
+                <div class="inside-callout">
+                  <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  <div>
+                    <p class="inside-callout-eyebrow">To your phone</p>
+                    <p>An SMS the moment a delivery doesn&rsquo;t match &mdash; before the draft clears.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
