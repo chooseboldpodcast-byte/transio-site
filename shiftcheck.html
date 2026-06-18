@@ -618,6 +618,43 @@
         box-shadow: 0 20px 60px rgba(20, 20, 20, 0.12);
       }
 
+      /* At-shift-change narrative: prose left, loop video right */
+      .handoff-grid {
+        display: grid;
+        grid-template-columns: 1.3fr 1fr;
+        gap: 44px;
+        align-items: center;
+        margin-top: 8px;
+      }
+
+      .handoff-grid .shift-visual-frame {
+        max-width: 360px;
+      }
+
+      .handoff-copy p {
+        margin: 0 0 16px;
+        color: var(--color-text-muted);
+        font-size: 15px;
+        line-height: 1.6;
+        max-width: 56ch;
+      }
+
+      .handoff-copy p:last-child {
+        margin-bottom: 0;
+      }
+
+      .handoff-copy p strong {
+        color: var(--color-text);
+        font-weight: 600;
+      }
+
+      @media (max-width: 900px) {
+        .handoff-grid {
+          grid-template-columns: 1fr;
+          gap: 28px;
+        }
+      }
+
       .shift-visual-frame img,
       .shift-visual-frame video {
         display: block;
@@ -1352,45 +1389,21 @@
         <section id="product" class="section" aria-labelledby="product-heading">
           <div class="section-inner">
             <header class="section-heading">
-              <p class="eyebrow">Behind the counter, fixed.</p>
-              <h2 id="product-heading">Close shifts in minutes, not half an hour.</h2>
-              <p>
-                The shelf behind the counter holds your highest-shrink, highest-stakes inventory
-                — and your messiest shift handoff. Trasio replaces the end-of-day recount with a
-                single walk of that shelf. Clerks scan with a standard tablet, Trasio verifies the
-                count, timestamps the handoff, and gives owners a clean, searchable record for
-                every shift.
-              </p>
+              <p class="eyebrow">At shift change</p>
+              <h2 id="product-heading">Sarah closes. Mike takes over. ShiftCheck makes the handoff clear.</h2>
             </header>
-            <div class="shift-story-row" aria-label="Shift handoff story">
-              <article class="shift-card">
-                <p class="shift-eyebrow">The story begins</p>
-                <h3>Sarah's shift is ending.</h3>
-                <p>She points her tablet at the shelf. AI counts <strong>189 packs</strong> in seconds. She confirms and clocks out.</p>
-              </article>
-
-              <svg class="handoff-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M5 12h14"/>
-                <path d="m12 5 7 7-7 7"/>
-              </svg>
-
+            <div class="handoff-grid">
+              <div class="handoff-copy">
+                <p>Sarah finishes her shift and sweeps the tablet across the behind-the-counter inventory. ShiftCheck records the inventory state in seconds before responsibility changes. When Mike takes over, he sees the same verified count instead of relying on memory, a handwritten note, or a rushed hand count.</p>
+                <p>If something does not match, the discrepancy shows up while both shifts are still there. The store can deal with it at the handoff instead of arguing about it later, when nobody agrees on what was there or when it changed.</p>
+                <p><strong>That is the point of ShiftCheck: a faster close, a cleaner handoff, and a record both shifts can trust.</strong></p>
+              </div>
               <div class="shift-visual">
                 <div class="shift-visual-frame">
                   <video src="scan-loop.mp4" autoplay loop muted playsinline aria-label="AI-powered shelf scanning for shift verification" title="Camera-based inventory verification on a convenience store shelf"></video>
                 </div>
                 <div class="shift-pill">✔ VERIFIED</div>
               </div>
-
-              <svg class="handoff-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M5 12h14"/>
-                <path d="m12 5 7 7-7 7"/>
-              </svg>
-
-              <article class="shift-card">
-                <p class="shift-eyebrow">The handoff</p>
-                <h3>Mike arrives.</h3>
-                <p>Quick scan. Counts match. Handoff complete. <strong>You didn't pay for a single wasted minute.</strong> No one stays late.</p>
-              </article>
             </div>
 
             <div class="outcomes-grid outcomes-grid--stamps" aria-label="Key outcomes">
