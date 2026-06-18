@@ -853,6 +853,35 @@
         flex: 1;
       }
 
+      /* Benefits — borderless columns with a green top accent */
+      .outcomes-grid--benefits {
+        gap: 30px;
+        margin-top: 30px;
+      }
+
+      .outcomes-grid--benefits .outcome-card {
+        background: transparent;
+        border: none;
+        border-top: 2px solid var(--color-primary);
+        border-radius: 0;
+        padding: 16px 0 0;
+      }
+
+      .outcomes-grid--benefits .outcome-eyebrow {
+        margin: 0 0 10px;
+      }
+
+      .outcomes-grid--benefits .outcome-card h3 {
+        font-size: 16px;
+        letter-spacing: -0.02em;
+        margin: 0 0 8px;
+      }
+
+      .outcomes-grid--benefits .outcome-card p:not(.outcome-eyebrow) {
+        font-size: 14px;
+        line-height: 1.55;
+      }
+
       .pricing-row {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -1441,6 +1470,33 @@
             </div>
 
             <p class="shift-caption shift-caption--closer">Outgoing confirms. Incoming verifies. Clean handoff.</p>
+          </div>
+        </section>
+
+        <!-- WHY IT MATTERS (benefits) -->
+        <section class="section" aria-labelledby="sc-why-matters-heading">
+          <div class="section-inner">
+            <header class="section-heading">
+              <p class="eyebrow">Why it matters</p>
+              <h2 id="sc-why-matters-heading">Faster close. Fewer disputes. Clearer accountability.</h2>
+            </header>
+            <div class="outcomes-grid outcomes-grid--benefits" aria-label="Why it matters">
+              <article class="outcome-card">
+                <p class="outcome-eyebrow">Faster close</p>
+                <h3>Stop paying people to count when they should be serving customers.</h3>
+                <p>ShiftCheck helps stores complete shift close in minutes instead of dragging through manual recounts at the end of the shift.</p>
+              </article>
+              <article class="outcome-card">
+                <p class="outcome-eyebrow">Fewer disputes</p>
+                <h3>Catch disagreements before they become finger-pointing.</h3>
+                <p>When inventory is verified at handoff, both shifts work from the same record instead of conflicting memory.</p>
+              </article>
+              <article class="outcome-card">
+                <p class="outcome-eyebrow">Clearer accountability</p>
+                <h3>Know what was on hand, when it changed, and when responsibility moved.</h3>
+                <p>That gives managers a cleaner way to investigate shrink and coach stores without guessing.</p>
+              </article>
+            </div>
           </div>
         </section>
 
