@@ -618,41 +618,16 @@
         box-shadow: 0 20px 60px rgba(20, 20, 20, 0.12);
       }
 
-      /* At-shift-change narrative: prose left, loop video right */
-      .handoff-grid {
-        display: grid;
-        grid-template-columns: 1.3fr 1fr;
-        gap: 44px;
-        align-items: center;
-        margin-top: 8px;
-      }
-
-      .handoff-grid .shift-visual-frame {
-        max-width: 360px;
-      }
-
-      .handoff-copy p {
-        margin: 0 0 16px;
-        color: var(--color-text-muted);
-        font-size: 15px;
-        line-height: 1.6;
-        max-width: 56ch;
-      }
-
-      .handoff-copy p:last-child {
-        margin-bottom: 0;
-      }
-
-      .handoff-copy p strong {
-        color: var(--color-text);
+      /* At-shift-change: bold closing line under the story row */
+      .handoff-closing {
+        text-align: center;
+        max-width: 640px;
+        margin: 34px auto 0;
+        font-size: 16px;
+        line-height: 1.5;
         font-weight: 600;
-      }
-
-      @media (max-width: 900px) {
-        .handoff-grid {
-          grid-template-columns: 1fr;
-          gap: 28px;
-        }
+        letter-spacing: -0.01em;
+        color: var(--color-text);
       }
 
       .shift-visual-frame img,
@@ -1392,19 +1367,37 @@
               <p class="eyebrow">At shift change</p>
               <h2 id="product-heading">Sarah closes. Mike takes over. ShiftCheck makes the handoff clear.</h2>
             </header>
-            <div class="handoff-grid">
-              <div class="handoff-copy">
-                <p>Sarah finishes her shift and sweeps the tablet across the behind-the-counter inventory. ShiftCheck records the inventory state in seconds before responsibility changes. When Mike takes over, he sees the same verified count instead of relying on memory, a handwritten note, or a rushed hand count.</p>
-                <p>If something does not match, the discrepancy shows up while both shifts are still there. The store can deal with it at the handoff instead of arguing about it later, when nobody agrees on what was there or when it changed.</p>
-                <p><strong>That is the point of ShiftCheck: a faster close, a cleaner handoff, and a record both shifts can trust.</strong></p>
-              </div>
+            <div class="shift-story-row" aria-label="Shift handoff story">
+              <article class="shift-card">
+                <p class="shift-eyebrow">Sarah closes</p>
+                <h3>Her shift is ending.</h3>
+                <p>She sweeps the tablet across the behind-the-counter shelf. ShiftCheck records the <strong>verified count</strong> in seconds &mdash; before responsibility changes.</p>
+              </article>
+
+              <svg class="handoff-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14"/>
+                <path d="m12 5 7 7-7 7"/>
+              </svg>
+
               <div class="shift-visual">
                 <div class="shift-visual-frame">
                   <video src="scan-loop.mp4" autoplay loop muted playsinline aria-label="AI-powered shelf scanning for shift verification" title="Camera-based inventory verification on a convenience store shelf"></video>
                 </div>
                 <div class="shift-pill">✔ VERIFIED</div>
               </div>
+
+              <svg class="handoff-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14"/>
+                <path d="m12 5 7 7-7 7"/>
+              </svg>
+
+              <article class="shift-card">
+                <p class="shift-eyebrow">Mike takes over</p>
+                <h3>His shift begins.</h3>
+                <p>He sees the same verified count &mdash; no memory, no handwritten note, no rushed recount. Any mismatch shows up <strong>while both shifts are still there</strong> to settle it.</p>
+              </article>
             </div>
+            <p class="handoff-closing">That is the point of ShiftCheck: a faster close, a cleaner handoff, and a record both shifts can trust.</p>
 
             <div class="outcomes-grid outcomes-grid--stamps" aria-label="Key outcomes">
               <article class="outcome-card">
