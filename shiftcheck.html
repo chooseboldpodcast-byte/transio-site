@@ -853,6 +853,39 @@
         flex: 1;
       }
 
+      /* Light benefit strip — borderless icon-top, lighter than cards */
+      .outcomes-grid--strip {
+        gap: 30px;
+        margin-top: 30px;
+      }
+
+      .outcomes-grid--strip .outcome-card {
+        background: transparent;
+        border: none;
+        padding: 0;
+      }
+
+      .outcomes-grid--strip .card-icon {
+        width: 24px;
+        height: 24px;
+        margin-bottom: 12px;
+      }
+
+      .outcomes-grid--strip .outcome-eyebrow {
+        margin: 0 0 6px;
+      }
+
+      .outcomes-grid--strip .outcome-card h3 {
+        font-size: 16px;
+        letter-spacing: -0.02em;
+        margin: 0 0 6px;
+      }
+
+      .outcomes-grid--strip .outcome-card p:not(.outcome-eyebrow) {
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
       /* Benefits — borderless columns with a green top accent */
       .outcomes-grid--benefits {
         gap: 30px;
@@ -1565,6 +1598,36 @@
                   <li>Shows what changed and when responsibility moved.</li>
                   <li>Gives managers a cleaner basis for follow-up and review.</li>
                 </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- WHAT CHANGES (owner-operator benefits, light strip) -->
+        <section class="section" aria-labelledby="sc-changes-heading">
+          <div class="section-inner">
+            <header class="section-heading">
+              <p class="eyebrow">For owner-operators</p>
+              <h2 id="sc-changes-heading">What changes when ShiftCheck is on.</h2>
+            </header>
+            <div class="outcomes-grid outcomes-grid--strip" aria-label="What changes when ShiftCheck is on">
+              <article class="outcome-card">
+                <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <p class="outcome-eyebrow">Less labor waste</p>
+                <h3>Close faster with fewer recounts.</h3>
+                <p>Your team spends less time standing at the counter counting product and more time getting the store through shift change.</p>
+              </article>
+              <article class="outcome-card">
+                <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                <p class="outcome-eyebrow">Less ambiguity</p>
+                <h3>Shrink has a tighter window.</h3>
+                <p>Instead of discovering missing inventory hours later, stores can narrow discrepancies to a shift interval and act faster.</p>
+              </article>
+              <article class="outcome-card">
+                <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                <p class="outcome-eyebrow">Better management visibility</p>
+                <h3>See patterns across stores and shifts.</h3>
+                <p>A cleaner shift record makes it easier to spot recurring exceptions, coach teams, and find stores that need attention.</p>
               </article>
             </div>
           </div>
