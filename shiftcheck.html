@@ -1335,6 +1335,12 @@
       .section--bridge { padding-top: 28px; padding-bottom: 28px; }
       .section--bridge .section-heading { max-width: 760px; margin-bottom: 0; }
       .section--bridge .product-cta { margin-top: 16px; }
+      .faq-list { margin-top: 24px; border-top: 1px solid var(--color-border); }
+      .faq-row { padding: 22px 0; border-bottom: 1px solid var(--color-border); display: grid; grid-template-columns: 1fr 1.7fr; gap: 32px; align-items: start; }
+      .faq-q { margin: 0; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: var(--color-text); }
+      .faq-a { margin: 0; font-size: 14px; line-height: 1.6; color: var(--color-text-muted); }
+      .faq-a strong { color: var(--color-text); font-weight: 600; }
+      @media (max-width: 720px) { .faq-row { grid-template-columns: 1fr; gap: 8px; } }
       @media (max-width: 720px) { .product-grid { grid-template-columns: 1fr; } }
     </style>
   </head>
@@ -1618,6 +1624,30 @@
               <p>ShiftCheck runs alongside FuelMatch in the same Trasio app and under the same login. ShiftCheck protects inventory at handoff. FuelMatch protects fuel spend. Two major sources of loss in convenience retail &mdash; covered.</p>
               <a class="product-cta" href="/fuelmatch">See Trasio FuelMatch &rarr;</a>
             </header>
+          </div>
+        </section>
+
+        <!-- FAQ (stacked Q&A rows) -->
+        <section class="section" aria-labelledby="sc-faq-heading">
+          <div class="section-inner">
+            <header class="section-heading">
+              <p class="eyebrow">Straight answers</p>
+              <h2 id="sc-faq-heading">What operators ask first.</h2>
+            </header>
+            <div class="faq-list">
+              <div class="faq-row">
+                <p class="faq-q">Do I need new hardware?</p>
+                <p class="faq-a"><strong>No.</strong> ShiftCheck runs on the same tablets your team already uses for Trasio. Nothing extra to buy or install.</p>
+              </div>
+              <div class="faq-row">
+                <p class="faq-q">How long does shift close take?</p>
+                <p class="faq-a"><strong>Minutes.</strong> The goal is to replace slow hand counts and recount loops with a verified handoff your team can complete quickly.</p>
+              </div>
+              <div class="faq-row">
+                <p class="faq-q">What inventory does it cover?</p>
+                <p class="faq-a">ShiftCheck is built for behind-the-counter inventory where accuracy and accountability matter most at shift change.</p>
+              </div>
+            </div>
           </div>
         </section>
 
